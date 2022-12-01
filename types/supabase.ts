@@ -14,16 +14,22 @@ export interface Database {
           id: number;
           created_at: string | null;
           email: string;
+          first_name: string | null;
+          occupation: string | null;
         };
         Insert: {
           id?: number;
           created_at?: string | null;
           email: string;
+          first_name?: string | null;
+          occupation?: string | null;
         };
         Update: {
           id?: number;
           created_at?: string | null;
           email?: string;
+          first_name?: string | null;
+          occupation?: string | null;
         };
       };
     };
