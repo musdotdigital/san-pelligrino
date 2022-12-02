@@ -114,12 +114,10 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                             ]}
                             name="occupation"
                         />
-                        <div className="flex flex-col justify-center pt-4">
+                        <div className="flex justify-center pt-4 ">
                             <button
                                 disabled={isSubmitting}
-                                className={setClassNames(
-                                    'rounded-lg px-3 py-1.5 text-sm font-semibold leading- shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20'
-                                )}
+                                className="w-full rounded-lg px-3 py-1.5 text-sm font-semibold leading- shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                                 type="submit"
                             >
                                 {status.success ? 'Signed Up!' : 'Notify Me'}

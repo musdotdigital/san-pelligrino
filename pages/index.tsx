@@ -3,7 +3,7 @@ import { Database } from '../types/supabase'
 import React, { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import WatilistSignUp from '../modules/WaitlistSignUp'
+import WatilistSignUp from '../modules/WaitlistSignUp/index'
 
 const supabaseUrl = 'https://ykkqwcymauliqdecgcoi.supabase.co'
 const supabaseKey = process.env.SUPABASE_KEY || '1'
