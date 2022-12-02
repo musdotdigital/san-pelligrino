@@ -1,8 +1,10 @@
 import React from 'react'
-import { Formik, Field, FormikHelpers } from 'formik'
+
 import { SupabaseClient } from '@supabase/supabase-js'
-import styles from '../styles/Home.module.css'
+import { Formik, Field, FormikHelpers } from 'formik'
 import { object, string } from 'yup'
+
+import styles from '../styles/Home.module.css'
 
 const occupations = [
     'Undergraduate Student',
@@ -71,9 +73,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
-                onSubmit={(values, { setStatus, setSubmitting, ...rest }) => {
-                    addToWatchlist(values, { setStatus, setSubmitting, ...rest })
-                }}
+                onSubmit={addToWatchlist}
             >
                 {({
                     values,
@@ -115,14 +115,14 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                                 value={values.email}
                                 className={styles.signup}
                             />
+                            <div
+                                className={
+                                    errors.email && touched.email
+                                        ? styles.inputinvalid
+                                        : styles.inputvalid
+                                }
+                            />
                             {errors.email && touched.email && errors.email}
-                            {/* <div
-                className={
-                  errors.email && touched.email
-                    ? styles.inputinvalid
-                    : styles.inputvalid
-                }
-              /> */}
                         </div>
                         <Field name="occuaption" as="select" className={styles.signup}>
                             {occupations.map((occ, key) => {

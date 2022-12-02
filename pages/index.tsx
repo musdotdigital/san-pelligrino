@@ -1,10 +1,12 @@
+import React from 'react'
+
+import { createClient } from '@supabase/supabase-js'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import { createClient } from '@supabase/supabase-js'
-import { Database } from '../types/supabase'
-import React from 'react'
+
 import WatilistSignUp from '../modules/waitlistSignUp'
+import styles from '../styles/Home.module.css'
+import { Database } from '../types/supabase'
 
 const supabaseUrl = 'https://ykkqwcymauliqdecgcoi.supabase.co'
 const supabaseKey = process.env.SUPABASE_KEY || '1'
