@@ -1,8 +1,11 @@
 import React from 'react'
 import { Formik, Field, FormikHelpers } from 'formik'
 import { SupabaseClient } from '@supabase/supabase-js'
-import styles from '../styles/Home.module.css'
+
 import { object, string } from 'yup'
+import Input from '../components/Input'
+import Select from '../components/Select'
+import { setClassNames } from '../utils/tailwindUtils'
 
 const occupations = [
     'Undergraduate Student',
@@ -59,89 +62,75 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
     }
 
     return (
-        <div
-            style={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center'
+        <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={(values, { setStatus, setSubmitting, ...rest }) => {
+                addToWatchlist(values, { setStatus, setSubmitting, ...rest })
             }}
         >
-            <h1>Sign Up Here!</h1>
-            <Formik
-                initialValues={initialValues}
-                validationSchema={validationSchema}
-                onSubmit={(values, { setStatus, setSubmitting, ...rest }) => {
-                    addToWatchlist(values, { setStatus, setSubmitting, ...rest })
-                }}
-            >
-                {({
-                    values,
-                    errors,
-                    touched,
-                    handleChange,
-                    handleBlur,
-                    isSubmitting,
-                    status = { success: false },
-                    handleSubmit
-                }) => (
-                    <form
-                        style={{ display: 'flex', flexDirection: 'column' }}
-                        onSubmit={handleSubmit}
-                    >
-                        <input
+            {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                isSubmitting,
+                status = { success: false },
+                handleSubmit
+            }) => (
+                <div className="flex flex-col justify-center">
+                    <form onSubmit={handleSubmit}>
+                        <Input
+                            label="What should we call you?"
                             type="text"
                             name="firstName"
                             placeholder="What's your name?"
                             onChange={handleChange}
                             onBlur={handleBlur}
                             value={values.firstName}
-                            className={styles.signup}
                         />
-                        <div
-                            style={{
-                                display: 'flex',
-                                flexDirection: 'column',
-                                justifyContent: 'center',
-                                alignItems: 'center'
-                            }}
-                        >
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Email Address"
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.email}
-                                className={styles.signup}
-                            />
-                            {errors.email && touched.email && errors.email}
-                            {/* <div
-                className={
-                  errors.email && touched.email
-                    ? styles.inputinvalid
-                    : styles.inputvalid
-                }
-              /> */}
-                        </div>
-                        <Field name="occuaption" as="select" className={styles.signup}>
-                            {occupations.map((occ, key) => {
-                                return (
-                                    <option value={occ} key={key}>
-                                        {occ}
-                                    </option>
-                                )
-                            })}
-                        </Field>
 
-                        <button type="submit" disabled={isSubmitting} className={styles.button}>
-                            {status.success ? 'Signed Up!' : 'Submit'}
-                        </button>
+                        <Input
+                            label="Your email"
+                            type="email"
+                            name="email"
+                            placeholder="Email Address"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.email}
+                        />
+                        {/* {errors.email && touched.email && errors.email} */}
+
+                        <Select
+                            options={[
+                                'Undergraduate Student',
+                                'Postgraudate Student',
+                                'PhD Student',
+                                'Research Fellow',
+                                'Professor',
+                                'Inudstry Reseacher',
+                                'Other'
+                            ]}
+                            name="occupation"
+                        />
+                        <div className="flex flex-col justify-center pt-4">
+                            <button
+                                disabled={isSubmitting}
+                                className={setClassNames(
+                                    'rounded-lg px-3 py-1.5 text-sm font-semibold leading- shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20'
+                                )}
+                                type="submit"
+                            >
+                                {status.success ? 'Signed Up!' : 'Notify Me'}
+                            </button>
+                        </div>
+
                         {status && status.formError && status.formError}
                     </form>
-                )}
-            </Formik>
-        </div>
+                </div>
+            )}
+        </Formik>
     )
 }
 
