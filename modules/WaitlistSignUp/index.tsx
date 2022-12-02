@@ -1,11 +1,11 @@
 import React from 'react'
-import { Formik, Field, FormikHelpers } from 'formik'
+import { Formik, FormikHelpers } from 'formik'
 import { SupabaseClient } from '@supabase/supabase-js'
 
 import { object, string } from 'yup'
-import Input from '../components/Input'
-import Select from '../components/Select'
-import { setClassNames } from '../utils/tailwindUtils'
+import Input from '../../components/Input'
+import Select from '../../components/Select'
+import { setClassNames } from '../../utils/tailwindUtils'
 
 const occupations = [
     'Undergraduate Student',
