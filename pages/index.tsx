@@ -60,10 +60,7 @@ function Home() {
                         </div>
                     </nav>
                     <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-                        <Dialog.Panel
-                            focus="true" //@ts-ignore
-                            className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden"
-                        >
+                        <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
                             <div className="flex h-9 items-center justify-between">
                                 <div className="flex">
                                     <a href="#" className="-m-1.5 p-1.5">
