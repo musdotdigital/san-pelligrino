@@ -18,13 +18,13 @@ function Home() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className="isolate bg-white">
+        <div className="isolate bg-white dark:bg-black dark:text-white">
             <div className="px-6 pt-6 lg:px-8">
                 <div>
                     <nav className="flex h-9 items-center justify-between" aria-label="Global">
                         <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
                             <a href="#" className="-m-1.5 p-1.5">
-                                <span className="font-semibold text-gray-900 hover:text-gray-900 text-2xl">
+                                <span className="font-semibold text-gray-900 hover:text-gray-900 text-2xl dark:text-white dark:hover:text-gray-300">
                                     et al.
                                 </span>
                             </a>
@@ -32,7 +32,7 @@ function Home() {
                         <div className="flex lg:hidden">
                             <button
                                 type="button"
-                                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-white "
                                 onClick={() => setMobileMenuOpen(true)}
                             >
                                 <span className="sr-only">Open main menu</span>
@@ -44,7 +44,7 @@ function Home() {
                                 <a
                                     key={item.name}
                                     href={item.href}
-                                    className="font-semibold text-gray-900 hover:text-gray-900"
+                                    className="font-semibold text-gray-900 hover:text-gray-900 dark:text-white dark:hover:text-gray-300"
                                 >
                                     {item.name}
                                 </a>
@@ -53,7 +53,7 @@ function Home() {
                         <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
                             <a
                                 href="#"
-                                className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                                className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 dark:text-white shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:ring-gray-100/10 dark:hover:ring-gray-100/20"
                             >
                                 Join Waitlist
                             </a>
@@ -63,9 +63,9 @@ function Home() {
                         <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
                             <div className="flex h-9 items-center justify-between">
                                 <div className="flex">
-                                    <a href="#" className="-m-1.5 p-1.5">
-                                        <span className="sr-only">et al</span>
-                                    </a>
+                                    <span className="font-semibold text-gray-900 hover:text-gray-900 text-2xl dark:text-white">
+                                        et al.
+                                    </span>
                                 </div>
                                 <div className="flex">
                                     <button
@@ -85,7 +85,7 @@ function Home() {
                                             <a
                                                 key={item.name}
                                                 href={item.href}
-                                                className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+                                                className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10 dark:text-white dark:hover:text-gray-300"
                                             >
                                                 {item.name}
                                             </a>
@@ -94,7 +94,7 @@ function Home() {
                                     <div className="py-6">
                                         <a
                                             href="#"
-                                            className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
+                                            className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10 dark:text-white dark:hover:text-gray-300"
                                         >
                                             Join the Waitlist
                                         </a>
@@ -110,7 +110,7 @@ function Home() {
                     <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
                         <div>
                             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                                <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                                <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:ring-gray-100/10 dark:hover:ring-gray-100/20">
                                     <span className="text-gray-600">
                                         Researching has never been so easy.{' '}
                                         <a href="#" className="font-semibold text-indigo-600">
@@ -124,7 +124,7 @@ function Home() {
                                 <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
                                     Level up your research game.
                                 </h1>
-                                <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
+                                <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-grey-100 sm:text-center">
                                     The platform to search, take notes, organise and collaborate.
                                     All in one place. We handle the boring stuff so you can focus on
                                     what matters.
@@ -133,11 +133,11 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-gray-50">
+                <div className="bg-gray-50  dark:bg-black">
                     <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8 ">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl">
                             <span className="block">Ready to level up your research game?</span>
-                            <span className="block text-indigo-600">Sign up to the waitlist.</span>
+                            <span className="block text-lime-400">Sign up to the waitlist.</span>
                         </h2>
                         <div className="mt-8 sm:flex lg:mt-0 lg:flex-shrink-0 ">
                             <WatilistSignUp supabase={supabase} />
