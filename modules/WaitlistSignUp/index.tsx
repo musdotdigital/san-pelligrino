@@ -1,8 +1,9 @@
 import React from 'react'
-import { Formik, FormikHelpers } from 'formik'
-import { SupabaseClient } from '@supabase/supabase-js'
 
+import { SupabaseClient } from '@supabase/supabase-js'
+import { Formik, FormikHelpers } from 'formik'
 import { object, string } from 'yup'
+
 import Input from '../../components/Input'
 import Select from '../../components/Select'
 import { setClassNames } from '../../utils/tailwindUtils'
@@ -117,10 +118,16 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                         <div className="flex justify-center pt-4 ">
                             <button
                                 disabled={isSubmitting}
-                                className="w-full rounded-lg px-3 py-1.5 text-sm font-semibold leading- shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                                 type="submit"
+                                className="w-full text-center flex relative rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                             >
                                 {status.success ? 'Signed Up!' : 'Notify Me'}
+                                <div className="absolute right-0 top-0 top-align -mt-1.5 -mr-1.5">
+                                    <span className="flex h-3 w-3">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75" />
+                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500" />
+                                    </span>
+                                </div>
                             </button>
                         </div>
 

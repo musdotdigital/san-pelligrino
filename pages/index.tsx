@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { createClient } from '@supabase/supabase-js'
+import Typed from 'react-typed'
 
 import HomeSearch from '../modules/HomeSearch/'
 import TwoColumnFeature from '../modules/TwoColumnFeature'
@@ -122,7 +123,7 @@ function Home() {
             </div>
             <main>
                 <div className="relative px-6 lg:px-8">
-                    <div className="mx-auto max-w-3xl pt-20 pb-20 sm:pb-32 sm:pt-48">
+                    <div className="mx-auto max-w-3xl pt-20 pb-20 sm:pb-24 sm:pt-48">
                         <div>
                             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                                 <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -154,7 +155,7 @@ function Home() {
                 </div>
 
                 <TwoColumnFeature layout="2/3">
-                    <div className=" bg-gray-200 rounded-lg overflow-hidden drop-shadow-lg">
+                    <div className="rounded-lg overflow-hidden drop-shadow-lg">
                         <img
                             alt="/slide-one.png"
                             src={slideOne}
@@ -175,23 +176,67 @@ function Home() {
                 </TwoColumnFeature>
 
                 <TwoColumnFeature layout="1/2">
-                    <div className=" bg-gray-200 rounded-lg overflow-hidden drop-shadow-lg">
-                        <img
-                            alt="/slide-one.png"
-                            src={slideOne}
-                            className="group-hover:opacity-75"
-                            loading="lazy"
-                        />
+                    <div className="flex flex-row space-x-5">
+                        <div className="block p-6  rounded-lg drop-shadow-lg border border-gray-200">
+                            <h5 className="text-xl font-bold  text-gray-900 ">
+                                Trends in Data Centre Energy Consumption under the European Code of
+                                Conduct for Data Centre Energy Efficiency
+                            </h5>
+
+                            <p className="mt-6 text-sm text-gray-600 ">
+                                Climate change is recognised as one of the key challenges humankind
+                                is facing. The Information and Communication Technology (ICT) sector
+                                including data centres generates up to 2% of the global CO2
+                                emissions, a number on par to the aviation sector contribution, and
+                                data centres are estimated to have the fastest growing carbon
+                                footprint from across the whole ICT sector, mainly due to
+                                technological advances such as the cloud computing and the rapid
+                                growth of the use of Internet services. There are no recent
+                                estimations of the total energy consumption of the European data
+                                centre and of their energy efficiency. The aim of this paper is to
+                                evaluate, analyse and present the current trends in energy
+                                consumption and efficiency in data centres in the European Union
+                                using the data submitted by companies participating in the European
+                                Code of Conduct for Data Centre Energy Efficiency programme, a
+                                voluntary initiative created in 2008 in response to the increasing
+                                energy consumption in data centres and the need to reduce the
+                                related environmental, economic and energy supply security impacts.
+                                The analysis shows that the average Power Usage Effectiveness (PUE)
+                                of the facilities participating in the programme is declining year
+                                after year. This confirms that voluntary approaches could be
+                                effective in addressing climate and energy issue.
+                            </p>
+                        </div>
                     </div>
                     <div className="col-span-1">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:mt-36">
-                            Ready to level up your research game?
+                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                            Too long don't want to read?
                         </h2>
-                        <p className="mt-6 text-lg leading-8 text-gray-600 ">
-                            The platform to search for papers, organise your research and
-                            collaborate. All in one place. We handle the boring stuff so you can
-                            focus on what matters.
+                        <p className="mt-6 text-md pb-3 text-gray-600 ">
+                            Searching through hundreds of papers can be a pain. We summarise the
+                            most important parts of the paper so you can decide on what is important
+                            to you.
                         </p>
+                        <button
+                            onClick={() => {}}
+                            className="flex relative mt-3 rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                        >
+                            TLDR this paper
+                            <div className="absolute right-0 top-0 top-align -mt-1.5 -mr-1.5">
+                                <span className="flex h-3 w-3">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75" />
+                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500" />
+                                </span>
+                            </div>
+                        </button>
+                        <div className="pt-5">
+                            <Typed
+                                strings={[
+                                    'Data centres are a major contributor to global CO2 emissions, and this paper evaluated the current trends in energy consumption and efficiency in data centres in the European Union. The analysis showed a decreasing Power Usage Effectiveness (PUE), indicating that voluntary approaches can be effective in addressing climate and energy issues.'
+                                ]}
+                                typeSpeed={20}
+                            />
+                        </div>
                     </div>
                 </TwoColumnFeature>
 
