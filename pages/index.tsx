@@ -210,7 +210,7 @@ function Home() {
                     </div>
                     <div className="col-span-1">
                         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                            Too long don't want to read?
+                            Too long don`&apos;`t want to read?
                         </h2>
                         <p className="mt-6 text-md pb-3 text-gray-600 ">
                             Searching through hundreds of papers can be a pain. We summarise the
