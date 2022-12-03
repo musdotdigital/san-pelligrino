@@ -5,8 +5,9 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { createClient } from '@supabase/supabase-js'
 
 import HomeSearch from '../modules/HomeSearch/'
-import ProductFeature from '../modules/ProductFeature'
+import TwoColumnFeature from '../modules/TwoColumnFeature'
 import WatilistSignUp from '../modules/WaitlistSignUp/index'
+import { slideOne } from '../src/images'
 import { Database } from '../types/supabase'
 
 if (!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
@@ -121,7 +122,7 @@ function Home() {
             </div>
             <main>
                 <div className="relative px-6 lg:px-8">
-                    <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48">
+                    <div className="mx-auto max-w-3xl pt-20 pb-20 sm:pb-32 sm:pt-48">
                         <div>
                             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                                 <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -151,7 +152,57 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <ProductFeature />
+
+                <TwoColumnFeature
+                    layout="2/3"
+                    columnOne={
+                        <div className=" bg-gray-200 rounded-lg overflow-hidden drop-shadow-lg">
+                            <img
+                                alt="/slide-one.png"
+                                src={slideOne}
+                                className="group-hover:opacity-75"
+                                loading="lazy"
+                            />
+                        </div>
+                    }
+                    columnTwo={
+                        <div className="col-span-1">
+                            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:mt-36">
+                                Ready to level up your research game?
+                            </h2>
+                            <p className="mt-6 text-lg leading-8 text-gray-600 ">
+                                The platform to search for papers, organise your research and
+                                collaborate. All in one place. We handle the boring stuff so you can
+                                focus on what matters.
+                            </p>
+                        </div>
+                    }
+                />
+                <TwoColumnFeature
+                    layout="1/2"
+                    columnOne={
+                        <div className=" bg-gray-200 rounded-lg overflow-hidden drop-shadow-lg">
+                            <img
+                                alt="/slide-one.png"
+                                src={slideOne}
+                                className="group-hover:opacity-75"
+                                loading="lazy"
+                            />
+                        </div>
+                    }
+                    columnTwo={
+                        <div className="col-span-1">
+                            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:mt-36">
+                                Ready to level up your research game?
+                            </h2>
+                            <p className="mt-6 text-lg leading-8 text-gray-600 ">
+                                The platform to search for papers, organise your research and
+                                collaborate. All in one place. We handle the boring stuff so you can
+                                focus on what matters.
+                            </p>
+                        </div>
+                    }
+                />
 
                 <div className="bg-gray-50">
                     <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8 ">
