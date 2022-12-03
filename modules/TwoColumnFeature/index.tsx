@@ -17,8 +17,8 @@ const ProductFeature = (props: Props): React.ReactElement | null => {
                     <div className=" max-w-lg sm:mx-auto md:max-w-none">
                         <div
                             className={setClassNames(
-                                layout === '1/2' ? 'md:grid-cols-2' : 'md:grid-cols-3',
-                                'grid grid-cols-1 md:grid-cols-3 gap-36'
+                                layout === '2/3' ? 'md:grid-cols-3' : 'md:grid-cols-2',
+                                'grid grid-cols-1 gap-36'
                             )}
                         >
                             <div className={setClassNames(layout === '2/3' ? 'sm:col-span-2' : '')}>
