@@ -1,4 +1,3 @@
-import { on } from 'events'
 import React, { HTMLInputTypeAttribute } from 'react'
 
 type Props = {

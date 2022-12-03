@@ -1,14 +1,24 @@
-import { createClient } from '@supabase/supabase-js'
-import { Database } from '../types/supabase'
 import React, { useState } from 'react'
+
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import WatilistSignUp from '../modules/WaitlistSignUp/index'
-import ProductFeature from '../modules/ProductFeature'
-import HomeSearch from '../modules/HomeSearch'
+import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = 'https://ykkqwcymauliqdecgcoi.supabase.co'
-const supabaseKey = process.env.SUPABASE_KEY || '1'
+import HomeSearch from '../modules/HomeSearch/'
+import ProductFeature from '../modules/ProductFeature'
+import WatilistSignUp from '../modules/WaitlistSignUp/index'
+import { Database } from '../types/supabase'
+
+if (!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    throw new Error('No Supabase Key')
+}
+
+if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
+    throw new Error('No Supabase Url')
+}
+
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 
 const navigation = [
     { name: 'About Us', href: '#' },

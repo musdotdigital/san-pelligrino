@@ -1,7 +1,9 @@
-import { Fragment, useState } from 'react'
+import React, { Fragment, useState } from 'react'
+
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import { useField } from 'formik'
+
 import { setClassNames } from '../../utils/tailwindUtils'
 
 type Props = {

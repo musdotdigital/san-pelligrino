@@ -1,6 +1,92 @@
 {
-  "extends": "next/core-web-vitals",
-  "rules": {
-    "semi": ["error", "never"]
-  }
+    "extends": "next/core-web-vitals",
+    "rules": {
+        "import/no-cycle": 1,
+        "quotes": [
+            "error",
+            "single",
+            {
+                "avoidEscape": true
+            }
+        ],
+        "semi": ["error", "never"],
+        "comma-dangle": 0, // disallow trailing commas in object literals
+        "no-cond-assign": 1, // disallow assignment in conditional expressions
+        "no-const-assign": 2, // disallow assignment to const-declared variables
+        "no-unreachable": 1, // disallow unreachable statements after a return, throw, continue, or break statement
+        "use-isnan": 1, // disallow comparisons with the value NaN
+        "valid-jsdoc": 0, // Ensure JSDoc comments are valid (off by default)
+        "valid-typeof": 1, // Ensure that the results of typeof are compared against a valid string
+        "no-var": 1, // discouraging the use of var and encouraging the use of const or let instead
+
+        // Best Practices
+
+        "consistent-return": 0, // require return statements to either always or never specify values
+        "dot-notation": 1, // encourages use of dot notation whenever possible
+        "eqeqeq": [1, "allow-null"], // require the use of === and !==
+        "guard-for-in": 0, // make sure for-in loops have an if statement (off by default)
+        "no-else-return": 0, // disallow else after a return in an if (off by default)
+        "no-eq-null": 0, // disallow comparisons to null without a type-checking operator (off by default)
+        "no-eval": 1, // disallow use of eval()
+        "no-extend-native": 1, // disallow adding to native types
+        "no-extra-bind": 1, // disallow unnecessary function binding
+        "no-fallthrough": 1, // disallow fallthrough of case statements
+        "no-lone-blocks": 1, // disallow unnecessary nested blocks
+        "no-loop-func": 0, // disallow creation of functions within loops
+        "no-native-reassign": 0, // disallow reassignments of native objects
+        "no-redeclare": 0, // disallow declaring the same variable more then once
+        "semi-spacing": 1, // require a space after a semi-colon
+        "vars-on-top": 0, // requires to declare all vars on top of their containing scope (off by default)
+        "require-await": 2, // disallow assignment operators in return statements
+        "no-return-await": 2, // disallow async functions which have no await expression
+        "import/no-duplicates": "off", // allow duplicate imports to allow component & type groupings
+
+        // React Plugin
+
+        "react/display-name": 0,
+        "react/jsx-boolean-value": 0,
+        "react/jsx-no-duplicate-props": 2,
+        "react/jsx-no-undef": 1,
+        "react/jsx-sort-props": 0,
+        "react/jsx-uses-react": 1,
+        "react/jsx-uses-vars": 1,
+        "react/no-did-update-set-state": 1,
+        "react/no-string-refs": 1,
+        "react/no-unknown-property": 0,
+        "react/react-in-jsx-scope": 1,
+        "react/self-closing-comp": 1,
+        "react/wrap-multilines": 0,
+
+        // React Hooks
+
+        "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+        "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+
+        // less TS errors in Finimize codebase
+        "@typescript-eslint/ban-ts-comment": 0, // allow the @ts-ignore comment
+        "no-extra-boolean-cast": 0, // allow !!value negation
+
+        // random
+        "flowtype/no-types-missing-file-annotation": 0,
+
+        "import/order": [
+            "error",
+            {
+                "groups": ["builtin", "external", "parent", "sibling", "index"],
+                "pathGroups": [
+                    {
+                        "pattern": "react+(|-native)",
+                        "group": "external",
+                        "position": "before"
+                    }
+                ],
+                "pathGroupsExcludedImportTypes": ["react"],
+                "newlines-between": "always",
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ]
+    }
 }

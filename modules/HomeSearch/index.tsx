@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 import Typed from 'react-typed'
 
