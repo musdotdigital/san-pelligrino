@@ -7,7 +7,9 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "types": "tsc"
+        "types": "tsc",
+        "env:pull": "vercel env pull",
+        "env:add": "vercel env add"
     },
     "dependencies": {
         "@headlessui/react": "^1.7.4",
