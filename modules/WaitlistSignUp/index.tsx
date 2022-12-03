@@ -6,6 +6,7 @@ import { object, string } from 'yup'
 
 import Input from '../../components/Input'
 import Select from '../../components/Select'
+import { setClassNames } from '../../utils/tailwindUtils'
 
 const occupations = [
     'Undergraduate Student',
@@ -134,8 +135,18 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                                 {status.success ? 'Signed Up!' : 'Notify Me'}
                                 <div className="absolute right-0 top-0 top-align -mt-1.5 -mr-1.5">
                                     <span className="flex h-3 w-3">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75" />
-                                        <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500" />
+                                        <span
+                                            className={setClassNames(
+                                                status.success ? 'bg-green-400' : 'bg-sky-400',
+                                                ' animate-ping absolute inline-flex h-full w-full rounded-full opacity-75'
+                                            )}
+                                        />
+                                        <span
+                                            className={setClassNames(
+                                                status.success ? 'bg-green-500' : 'bg-sky-400',
+                                                'relative inline-flex rounded-full h-3 w-3 '
+                                            )}
+                                        />
                                     </span>
                                 </div>
                             </button>
