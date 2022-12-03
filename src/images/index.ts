@@ -1,1 +1,1 @@
-export const slideOne = '/static/images/slide-one.png'
+export const slideOne = '/slide-one.png'
