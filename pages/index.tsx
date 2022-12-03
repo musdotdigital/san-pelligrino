@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import WatilistSignUp from '../modules/WaitlistSignUp/index'
+import ProductFeature from '../modules/ProductFeature'
+import HomeSearch from '../modules/HomeSearch'
 
 const supabaseUrl = 'https://ykkqwcymauliqdecgcoi.supabase.co'
 const supabaseKey = process.env.SUPABASE_KEY || '1'
@@ -64,7 +66,9 @@ function Home() {
                             <div className="flex h-9 items-center justify-between">
                                 <div className="flex">
                                     <a href="#" className="-m-1.5 p-1.5">
-                                        <span className="sr-only">et al</span>
+                                        <span className="font-semibold text-gray-900 hover:text-gray-900 text-2xl">
+                                            et al
+                                        </span>
                                     </a>
                                 </div>
                                 <div className="flex">
@@ -107,7 +111,7 @@ function Home() {
             </div>
             <main>
                 <div className="relative px-6 lg:px-8">
-                    <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+                    <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48">
                         <div>
                             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                                 <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -125,14 +129,20 @@ function Home() {
                                     Level up your research game.
                                 </h1>
                                 <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-                                    The platform to search, take notes, organise and collaborate.
-                                    All in one place. We handle the boring stuff so you can focus on
-                                    what matters.
+                                    The platform to search for papers, organise your research and
+                                    collaborate. All in one place. We handle the boring stuff so you
+                                    can focus on what matters.
                                 </p>
+                            </div>
+
+                            <div className="mx-auto pt-12 max-w-lg">
+                                <HomeSearch />
                             </div>
                         </div>
                     </div>
                 </div>
+                <ProductFeature />
+
                 <div className="bg-gray-50">
                     <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8 ">
                         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -145,6 +155,38 @@ function Home() {
                     </div>
                 </div>
             </main>
+
+            <footer className="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6">
+                <span className="text-sm text-gray-500 sm:text-center ">
+                    © 2022{' '}
+                    <a href="https://flowbite.com/" className="hover:underline">
+                        et al
+                    </a>
+                    . All Rights Reserved.
+                </span>
+                <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500  sm:mt-0">
+                    <li>
+                        <a href="#" className="mr-4 hover:underline md:mr-6 ">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" className="mr-4 hover:underline md:mr-6">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" className="mr-4 hover:underline md:mr-6">
+                            Licensing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" className="hover:underline">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </footer>
         </div>
     )
 }
