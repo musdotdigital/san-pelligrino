@@ -1,12 +1,11 @@
 import React from 'react'
 
-import { SupabaseClient } from '@supabase/supabase-js'
+import { PostgrestError, SupabaseClient } from '@supabase/supabase-js'
 import { Formik, FormikHelpers } from 'formik'
 import { object, string } from 'yup'
 
 import Input from '../../components/Input'
 import Select from '../../components/Select'
-import { setClassNames } from '../../utils/tailwindUtils'
 
 const occupations = [
     'Undergraduate Student',
@@ -30,6 +29,17 @@ interface FormValues {
     occupation: occupationTypes
 }
 
+const handleWatchListErrors = (error: PostgrestError) => {
+    switch (error.code) {
+        case '23505':
+            return 'You are already on the waitlist! 🎉'
+        case '23502':
+            return 'Please fill out all the fields 🤠'
+        default:
+            return '😧 Sorry there was an error, please try again'
+    }
+}
+
 const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
     const addToWatchlist = async (
         { email, firstName, occupation }: FormValues,
@@ -45,8 +55,8 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                 })
                 .then(res => {
                     res.data === null && res.error === null
-                        ? setStatus({ success: true })
-                        : res.error && setStatus({ formError: res.error.message })
+                        ? setStatus({ success: true }) // success
+                        : res.error && setStatus({ formError: handleWatchListErrors(res.error) }) // error
                     setSubmitting(false)
                 })
         } catch (e) {
@@ -101,7 +111,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                             onBlur={handleBlur}
                             value={values.email}
                         />
-                        {/* {errors.email && touched.email && errors.email} */}
+                        <p className="py-3">{errors.email && touched.email && errors.email}</p>
 
                         <Select
                             options={[
@@ -117,7 +127,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                         />
                         <div className="flex justify-center pt-4 ">
                             <button
-                                disabled={isSubmitting}
+                                disabled={isSubmitting || status.success}
                                 type="submit"
                                 className="w-full text-center flex relative rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                             >
@@ -130,8 +140,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                                 </div>
                             </button>
                         </div>
-
-                        {status && status.formError && status.formError}
+                        <p className="mt-3">{status && status.formError && status.formError}</p>
                     </form>
                 </div>
             )}

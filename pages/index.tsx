@@ -140,7 +140,7 @@ function Home() {
                                 <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
                                     Level up your research game.
                                 </h1>
-                                <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
+                                <p className="mt-6 text-lg leading-2 text-gray-600 sm:text-center">
                                     The platform to search for papers, organise your research and
                                     collaborate. All in one place. We handle the boring stuff so you
                                     can focus on what matters.
@@ -167,7 +167,7 @@ function Home() {
                         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:mt-36">
                             Ready to level up your research game?
                         </h2>
-                        <p className="mt-6 text-lg leading-8 text-gray-600 ">
+                        <p className="mt-6 text-md  text-gray-600 ">
                             The platform to search for papers, organise your research and
                             collaborate. All in one place. We handle the boring stuff so you can
                             focus on what matters.
