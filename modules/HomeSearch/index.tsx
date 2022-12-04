@@ -14,16 +14,15 @@ const HomeSearch = () => (
                 <div className="hidden sm:inline-block mr-12">
                     <Typed
                         strings={[
-                            'Deep learning for medical applications...',
-                            'Analysis of the human genome...',
-                            'Fairness in multi-modal transport systems...'
+                            'Data centre energy consumption...',
+                            'Deep learning for medical applications...'
                         ]}
                         typeSpeed={100}
                         backSpeed={40}
                         loop
                     />
                 </div>
-                <div className="sm:hidden">Analysis of the human genome...</div>
+                <div className="sm:hidden">Data centre energy consumption....</div>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400">
                 ⌘K
@@ -31,7 +30,7 @@ const HomeSearch = () => (
         </div>
         <a
             href="#start"
-            className="p-2.5 ml-2 text-sm font-medium text-white bg-hot-pink rounded-xl hover:bg-light-hot-pink"
+            className="  transition ease-in-out delay-150 p-2.5 ml-2 text-sm font-medium text-white bg-hot-pink rounded-xl hover:bg-black duration-300"
         >
             <MagnifyingGlassIcon className="w-6 h-6" />
         </a>

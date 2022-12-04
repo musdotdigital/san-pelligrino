@@ -74,7 +74,7 @@ function Home() {
                         </div>
                     </nav>
                     <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-                        <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto  px-6 py-6 lg:hidden">
+                        <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto  px-6 py-6 lg:hidden bg-white">
                             <div className="flex h-9 items-center justify-between">
                                 <div className="flex">
                                     <a href="#" className="-m-1.5 p-1.5">
@@ -122,17 +122,17 @@ function Home() {
                 </div>
             </div>
             <main>
-                <TwoColumnFeature layout="1/2" className="sm:pt-48">
+                <TwoColumnFeature layout="1/2" className="pt-24 sm:pt-48" single>
                     <div className="relative px-6 lg:px-8">
-                        <div className="mx-auto max-w-3xl">
+                        <div className="mx-auto max-w-3xl text-center">
                             <div>
-                                <div className="hidden lg:mb-8 sm:flex">
+                                <div className="hidden lg:mb-8 sm:flex w-full  justify-center">
                                     <div className="mb-4 md:mb-0 relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                                         <span className="text-gray-600">
                                             Researching has never been so easy.{' '}
                                             <a
                                                 href="#waitlist"
-                                                className="font-semibold text-indigo-600"
+                                                className="font-semibold text-hot-pink"
                                             >
                                                 <span
                                                     className="absolute inset-0"
@@ -171,11 +171,12 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="relative h-full bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5">
+                    {/* <div className="relative h-full bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5">
                         <div className="absolute inset-y-0 flex items-center pointer-events-none"></div>
-                    </div>
+                    </div> */}
+                    <></>
                 </TwoColumnFeature>
-
+                <div className="sm:py-12" /> {/* REMOVE PENDING ART */}
                 <TwoColumnFeature layout="2/3">
                     <div className="col-span-1" id="start">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:mt-24">
@@ -198,7 +199,6 @@ function Home() {
                         />
                     </div>
                 </TwoColumnFeature>
-
                 <TwoColumnFeature layout="2/3" inverse>
                     <div className="flex flex-row space-x-5 justify-center">
                         <div className="">
@@ -246,12 +246,12 @@ function Home() {
                                     </span>
                                     <span
                                         id="badge-dismiss-default"
-                                        className="inline-flex items-center py-1 px-2 mr-2 text-sm font-medium  bg-zing-green rounded text-black"
+                                        className="inline-flex items-center py-1 px-2 mr-2 text-sm font-medium  bg-royal-blue rounded text-white"
                                     >
                                         Sustainability
                                         <button
                                             type="button"
-                                            className="inline-flex items-center p-0.5 ml-2 text-sm  bg-transparent rounded-sm hover:bg-light-zing-green hover:text-white "
+                                            className="inline-flex items-center p-0.5 ml-2 text-sm  bg-transparent rounded-sm hover:bg-light-royal-blue  "
                                             data-dismiss-target="#badge-dismiss-default"
                                             aria-label="Remove"
                                         >
@@ -307,13 +307,13 @@ function Home() {
                             don&apos;t want to read?
                         </h2>
                         <p className="mt-6 text-md pb-3 text-gray-600 ">
-                            Searching through hundreds of papers can be a pain. We summarise the
-                            most important parts of the paper so you can decide on what is important
-                            to you.
+                            Searching through hundreds of papers can be a pain. We are building the
+                            most sophisticated AI with academia in mind to summarise the most
+                            important parts of the paper, so you can decide on what is important to
+                            you.
                         </p>
                     </div>
                 </TwoColumnFeature>
-
                 <TwoColumnFeature layout="2/3">
                     <div className="col-span-1">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl ">
