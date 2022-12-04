@@ -33,7 +33,7 @@ function Home() {
 
     return (
         <div className="isolate bg-white  text-gray-900  ">
-            <div className="px-50 pt-6 lg:px-8">
+            <div className="px-8 pt-6 lg:px-8">
                 <div>
                     <nav className="flex h-9 items-center justify-between" aria-label="Global">
                         <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
@@ -126,8 +126,8 @@ function Home() {
                     <div className="relative px-6 lg:px-8">
                         <div className="mx-auto max-w-3xl">
                             <div>
-                                <div className="hidden sm:mb-8 sm:flex ">
-                                    <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                                <div className="hidden lg:mb-8 sm:flex">
+                                    <div className="mb-4 md:mb-0 relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                                         <span className="text-gray-600">
                                             Researching has never been so easy.{' '}
                                             <a
@@ -144,7 +144,7 @@ function Home() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h1 className="text-4xl font-bold tracking-tight  sm:text-6xl">
+                                    <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
                                         Level up your research game.
                                     </h1>
                                     <p className="mt-6 text-md text-gray-600 ">
@@ -178,18 +178,18 @@ function Home() {
 
                 <TwoColumnFeature layout="2/3">
                     <div className="col-span-1" id="start">
-                        <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl sm:mt-36">
+                        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:mt-24">
                             <span className="bg-zing-green bg-opacity-40 py-1 rounded-sm">
                                 Search
                             </span>{' '}
                             , but done better.
                         </h2>
-                        <p className="mt-6 text-md  text-gray-600 ">
+                        <p className="mt-6 text-md text-gray-600 ">
                             Finding the right paper is an art form. We pair keywords, authors and
                             provide suggestions to help you search the field.
                         </p>
                     </div>
-                    <div className="rounded-xl  drop-shadow-lg">
+                    <div className="rounded-xl drop-shadow-lg">
                         <img
                             alt="/slide-one.png"
                             src={slideOne}
@@ -199,10 +199,10 @@ function Home() {
                     </div>
                 </TwoColumnFeature>
 
-                <TwoColumnFeature layout="1/2" inverse>
-                    <div className="flex flex-row space-x-5">
+                <TwoColumnFeature layout="2/3" inverse>
+                    <div className="flex flex-row space-x-5 justify-center">
                         <div className="">
-                            <div className=" mt-3 rounded-xl p-5 text-sm  leading-6 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                            <div className=" max-w-lg mt-3 rounded-xl p-5 text-sm  leading-6 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                                 <h5 className="text-2xl font-bold tracking-tight ">
                                     Trends in Data Centre Energy Consumption under the European Code
                                     of Conduct for Data Centre Energy Efficiency
@@ -273,7 +273,7 @@ function Home() {
                                     </span>
                                 </div>
                             </div>
-                            <div className="pt-5">
+                            <div className="pt-5 max-w-lg">
                                 <div className="flex h-72 sm:h-52 flex-col relative mt-3 rounded-xl p-5 text-sm leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                                     <span
                                         id="badge-dismiss-default"
@@ -301,7 +301,7 @@ function Home() {
                     </div>
                     <div className="col-span-1">
                         <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl">
-                            <span className="bg-ice-blue bg-opacity-40 py-1 rounded-sm">
+                            <span className="bg-royal-blue bg-opacity-40 py-1 rounded-sm">
                                 Too long,
                             </span>{' '}
                             don&apos;t want to read?
@@ -317,11 +317,9 @@ function Home() {
                 <TwoColumnFeature layout="2/3">
                     <div className="col-span-1">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl ">
-                            <span className="bg-royal-blue bg-opacity-40 py-1 rounded-sm">
-                                Track
-                            </span>{' '}
+                            <span className="bg-ice-blue bg-opacity-40 py-1 rounded-sm">Track</span>{' '}
                             ,{' '}
-                            <span className="bg-hot-pink bg-opacity-40 py-1 rounded-sm">
+                            <span className="bg-ice-blue bg-opacity-40 py-1 rounded-sm">
                                 organise
                             </span>{' '}
                             and{' '}
@@ -344,7 +342,7 @@ function Home() {
                         />
                     </div>
                 </TwoColumnFeature>
-                <div className=" rounded-xl bg-" id="waitlist">
+                <div className=" rounded-xl bg-gray-50" id="waitlist">
                     <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8 ">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
                             <span className="block">Ready to level up your research game?</span>
@@ -357,7 +355,7 @@ function Home() {
                 </div>
             </main>
 
-            <footer className="p-4 rounded-xl shadow md:flex md:items-center md:justify-between md:p-6">
+            <footer className="p-4  md:flex md:items-center md:justify-between md:p-6 bg-gray-50">
                 <span className="text-sm text-gray-500 sm:text-center ">
                     © 2022{' '}
                     <a href="https://flowbite.com/" className="hover:underline">

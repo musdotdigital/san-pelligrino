@@ -14,19 +14,24 @@ const ProductFeature = (props: Props): React.ReactElement | null => {
     if (children.length !== 2) return null
     else
         return (
-            <div className={setClassNames(className, 'sm:pb-24')}>
-                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className={setClassNames(className, 'pb-8 md:pb-24')}>
+                <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
                     <div className=" max-w-lg sm:mx-auto md:max-w-none">
                         <div
                             className={setClassNames(
                                 layout === '2/3' ? 'lg:grid-cols-3' : 'lg:grid-cols-2',
-                                'grid grid-cols-1 gap-36'
+                                'grid grid-cols-1 gap-8 lg:gap-36'
                             )}
                         >
                             <div className="grid grid-col-1 content-center ">
                                 {children[inverse ? 1 : 0]}
                             </div>
-                            <div className={setClassNames(layout === '2/3' ? 'sm:col-span-2' : '')}>
+                            <div
+                                className={setClassNames(
+                                    layout === '2/3' ? 'sm:col-span-2' : '',
+                                    'grid grid-col-1 content-center '
+                                )}
+                            >
                                 {children[inverse ? 0 : 1]}
                             </div>
                         </div>
