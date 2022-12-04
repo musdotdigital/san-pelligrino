@@ -9,7 +9,8 @@
         "lint": "next lint",
         "types": "tsc",
         "env:pull": "vercel env pull",
-        "env:add": "vercel env add"
+        "env:add": "vercel env add",
+        "push": "tsc && git push"
     },
     "dependencies": {
         "@headlessui/react": "^1.7.4",
