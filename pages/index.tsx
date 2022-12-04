@@ -22,10 +22,10 @@ if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 
-const navigation = [
-    { name: 'About Us', href: '#' },
-    { name: 'Product', href: '#' }
-]
+// const navigation = [
+//     // { name: 'About Us', href: '#' },
+//     // { name: 'Product', href: '#' }
+// ]
 
 function Home() {
     const supabase = createClient<Database>(supabaseUrl, supabaseKey)
@@ -33,7 +33,7 @@ function Home() {
 
     return (
         <div className="isolate bg-white  text-gray-900  ">
-            <div className="px-6 pt-6 lg:px-8">
+            <div className="px-50 pt-6 lg:px-8">
                 <div>
                     <nav className="flex h-9 items-center justify-between" aria-label="Global">
                         <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
@@ -54,7 +54,7 @@ function Home() {
                             </button>
                         </div>
                         <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
-                            {navigation.map(item => (
+                            {/* {navigation.map(item => (
                                 <a
                                     key={item.name}
                                     href={item.href}
@@ -62,11 +62,11 @@ function Home() {
                                 >
                                     {item.name}
                                 </a>
-                            ))}
+                            ))} */}
                         </div>
                         <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
                             <a
-                                href="#"
+                                href="#waitlist"
                                 className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6  shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                             >
                                 Join Waitlist
@@ -97,20 +97,20 @@ function Home() {
                             <div className="mt-6 flow-root">
                                 <div className="-my-6 divide-y divide-gray-500/10">
                                     <div className="space-y-2 py-6">
-                                        {navigation.map(item => (
+                                        {/* {navigation.map(item => (
                                             <a
                                                 key={item.name}
                                                 href={item.href}
-                                                className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
+                                                className="-mx-3 block rounded-xl py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
                                             >
                                                 {item.name}
                                             </a>
-                                        ))}
+                                        ))} */}
                                     </div>
                                     <div className="py-6">
                                         <a
                                             href="#"
-                                            className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
+                                            className="-mx-3 block rounded-xl py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                                         >
                                             Join the Waitlist
                                         </a>
@@ -122,50 +122,74 @@ function Home() {
                 </div>
             </div>
             <main>
-                <div className="relative px-6 lg:px-8">
-                    <div className="mx-auto max-w-3xl pt-20 pb-20 sm:pb-24 sm:pt-48">
-                        <div>
-                            <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                                <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                                    <span className="text-gray-600">
-                                        Researching has never been so easy.{' '}
-                                        <a href="#" className="font-semibold text-indigo-600">
-                                            <span className="absolute inset-0" aria-hidden="true" />
-                                            Read more <span aria-hidden="true">&rarr;</span>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
+                <TwoColumnFeature layout="1/2" className="sm:pt-48">
+                    <div className="relative px-6 lg:px-8">
+                        <div className="mx-auto max-w-3xl">
                             <div>
-                                <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
-                                    Level up your research game.
-                                </h1>
-                                <p className="mt-6 text-lg leading-2 text-gray-600 sm:text-center">
-                                    The platform to search for papers, organise your research and
-                                    collaborate. All in one place. We handle the boring stuff so you
-                                    can focus on what matters.
-                                </p>
-                            </div>
+                                <div className="hidden sm:mb-8 sm:flex ">
+                                    <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                                        <span className="text-gray-600">
+                                            Researching has never been so easy.{' '}
+                                            <a
+                                                href="#waitlist"
+                                                className="font-semibold text-indigo-600"
+                                            >
+                                                <span
+                                                    className="absolute inset-0"
+                                                    aria-hidden="true"
+                                                />
+                                                Sign up <span aria-hidden="true">&rarr;</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h1 className="text-4xl font-bold tracking-tight  sm:text-6xl">
+                                        Level up your research game.
+                                    </h1>
+                                    <p className="mt-6 text-md text-gray-600 ">
+                                        The platform to{' '}
+                                        <span className="bg-zing-green bg-opacity-40 py-1 rounded-sm">
+                                            search
+                                        </span>{' '}
+                                        for papers ,{' '}
+                                        <span className="bg-royal-blue bg-opacity-40 py-1 rounded-sm">
+                                            organise
+                                        </span>{' '}
+                                        your research and{' '}
+                                        <span className="bg-ice-blue bg-opacity-40 py-1 rounded-sm">
+                                            collaborate
+                                        </span>
+                                        . All in one place. We handle the boring stuff so you can
+                                        focus on what matters.
+                                    </p>
+                                </div>
 
-                            <div className="mx-auto pt-12 max-w-lg">
-                                <HomeSearch />
+                                <div className="mx-auto pt-12 max-w-lg">
+                                    <HomeSearch />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div className="relative h-full bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5">
+                        <div className="absolute inset-y-0 flex items-center pointer-events-none"></div>
+                    </div>
+                </TwoColumnFeature>
 
                 <TwoColumnFeature layout="2/3">
-                    <div className="col-span-1">
+                    <div className="col-span-1" id="start">
                         <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl sm:mt-36">
-                            Ready to level up your research game?
+                            <span className="bg-zing-green bg-opacity-40 py-1 rounded-sm">
+                                Search
+                            </span>{' '}
+                            , but done better.
                         </h2>
                         <p className="mt-6 text-md  text-gray-600 ">
-                            The platform to search for papers, organise your research and
-                            collaborate. All in one place. We handle the boring stuff so you can
-                            focus on what matters.
+                            Finding the right paper is an art form. We pair keywords, authors and
+                            provide suggestions to help you search the field.
                         </p>
                     </div>
-                    <div className="rounded-lg overflow-hidden drop-shadow-lg">
+                    <div className="rounded-xl  drop-shadow-lg">
                         <img
                             alt="/slide-one.png"
                             src={slideOne}
@@ -175,20 +199,10 @@ function Home() {
                     </div>
                 </TwoColumnFeature>
 
-                <TwoColumnFeature layout="1/2">
-                    <div className="col-span-1">
-                        <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl">
-                            Too long, don&apos;t want to read?
-                        </h2>
-                        <p className="mt-6 text-md pb-3 text-gray-600 ">
-                            Searching through hundreds of papers can be a pain. We summarise the
-                            most important parts of the paper so you can decide on what is important
-                            to you.
-                        </p>
-                    </div>
+                <TwoColumnFeature layout="1/2" inverse>
                     <div className="flex flex-row space-x-5">
                         <div className="">
-                            <div className=" mt-3 rounded-lg p-5 text-sm  leading-6 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                            <div className=" mt-3 rounded-xl p-5 text-sm  leading-6 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                                 <h5 className="text-2xl font-bold tracking-tight ">
                                     Trends in Data Centre Energy Consumption under the European Code
                                     of Conduct for Data Centre Energy Efficiency
@@ -205,12 +219,12 @@ function Home() {
                                 <div className="mt-3">
                                     <span
                                         id="badge-dismiss-default"
-                                        className="inline-flex items-center py-1 px-2 mr-2 text-sm font-medium text-blue-800 bg-blue-100 rounded "
+                                        className="inline-flex items-center py-1 px-2 mr-2 text-sm text-white font-medium bg-hot-pink  rounded "
                                     >
                                         Energy
                                         <button
                                             type="button"
-                                            className="inline-flex items-center p-0.5 ml-2 text-sm text-blue-400 bg-transparent rounded-sm hover:bg-blue-200 hover:text-blue-900 "
+                                            className="inline-flex items-center p-0.5 ml-2 text-sm bg-transparent rounded-sm hover:bg-light-hot-pink hover:text-hot-pink"
                                             data-dismiss-target="#badge-dismiss-default"
                                             aria-label="Remove"
                                         >
@@ -232,12 +246,12 @@ function Home() {
                                     </span>
                                     <span
                                         id="badge-dismiss-default"
-                                        className="inline-flex items-center py-1 px-2 mr-2 text-sm font-medium text-green-800 bg-green-100 rounded "
+                                        className="inline-flex items-center py-1 px-2 mr-2 text-sm font-medium  bg-zing-green rounded text-black"
                                     >
                                         Sustainability
                                         <button
                                             type="button"
-                                            className="inline-flex items-center p-0.5 ml-2 text-sm text-green-400 bg-transparent rounded-sm hover:bg-green-200 hover:text-blue-900 "
+                                            className="inline-flex items-center p-0.5 ml-2 text-sm  bg-transparent rounded-sm hover:bg-light-zing-green hover:text-white "
                                             data-dismiss-target="#badge-dismiss-default"
                                             aria-label="Remove"
                                         >
@@ -260,12 +274,12 @@ function Home() {
                                 </div>
                             </div>
                             <div className="pt-5">
-                                <div className="flex h-72 sm:h-52 flex-col relative mt-3 rounded-lg p-5 text-sm leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                                <div className="flex h-72 sm:h-52 flex-col relative mt-3 rounded-xl p-5 text-sm leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                                     <span
                                         id="badge-dismiss-default"
-                                        className="w-fit mb-3 items-center py-1 px-2 mr-2 text-sm font-medium text-yellow-800 bg-yellow-100 rounded "
+                                        className="w-fit mb-3 items-center py-1 px-2 mr-2 text-sm font-medium text-white bg-light-ice-blue  rounded "
                                     >
-                                        TLDR
+                                        Energy
                                     </span>
 
                                     <Typed
@@ -275,7 +289,7 @@ function Home() {
                                         typeSpeed={20}
                                     />
 
-                                    <div className="absolute right-0 top-0 top-align -mt-1.5 -mr-1.5">
+                                    <div className="absolute right-0 top-0 top-align -mt-1 -mr-1">
                                         <span className="flex h-3 w-3">
                                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75" />
                                             <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500" />
@@ -285,20 +299,43 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                </TwoColumnFeature>
-
-                <TwoColumnFeature layout="1/2">
                     <div className="col-span-1">
-                        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl ">
-                            Ready to level up your research game?
+                        <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl">
+                            <span className="bg-ice-blue bg-opacity-40 py-1 rounded-sm">
+                                Too long,
+                            </span>{' '}
+                            don&apos;t want to read?
                         </h2>
-                        <p className="mt-6 text-md  text-gray-600 ">
-                            The platform to search for papers, organise your research and
-                            collaborate. All in one place. We handle the boring stuff so you can
-                            focus on what matters.
+                        <p className="mt-6 text-md pb-3 text-gray-600 ">
+                            Searching through hundreds of papers can be a pain. We summarise the
+                            most important parts of the paper so you can decide on what is important
+                            to you.
                         </p>
                     </div>
-                    <div className="rounded-lg overflow-hidden drop-shadow-lg">
+                </TwoColumnFeature>
+
+                <TwoColumnFeature layout="2/3">
+                    <div className="col-span-1">
+                        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl ">
+                            <span className="bg-royal-blue bg-opacity-40 py-1 rounded-sm">
+                                Track
+                            </span>{' '}
+                            ,{' '}
+                            <span className="bg-hot-pink bg-opacity-40 py-1 rounded-sm">
+                                organise
+                            </span>{' '}
+                            and{' '}
+                            <span className="bg-ice-blue bg-opacity-40 py-1 rounded-sm">
+                                collaborate,
+                            </span>{' '}
+                            on your research.
+                        </h2>
+                        <p className="mt-6 text-md  text-gray-600 ">
+                            Whether you are a lone researcher or in a team, you can save your
+                            papers, leave notes and plan your future reads for all of your projects.
+                        </p>
+                    </div>
+                    <div className="rounded-xl overflow-hidden drop-shadow-lg">
                         <img
                             alt="/slide-one.png"
                             src={slideOne}
@@ -307,12 +344,11 @@ function Home() {
                         />
                     </div>
                 </TwoColumnFeature>
-
-                <div className="">
+                <div className=" rounded-xl bg-" id="waitlist">
                     <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8 ">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
                             <span className="block">Ready to level up your research game?</span>
-                            <span className="block text-indigo-600">Sign up to the waitlist.</span>
+                            <span className="block text-hot-pink">Sign up to the waitlist.</span>
                         </h2>
                         <div className="mt-8 sm:flex lg:mt-0 lg:flex-shrink-0 ">
                             <WatilistSignUp supabase={supabase} />
@@ -321,7 +357,7 @@ function Home() {
                 </div>
             </main>
 
-            <footer className="p-4 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6">
+            <footer className="p-4 rounded-xl shadow md:flex md:items-center md:justify-between md:p-6">
                 <span className="text-sm text-gray-500 sm:text-center ">
                     © 2022{' '}
                     <a href="https://flowbite.com/" className="hover:underline">
@@ -330,7 +366,7 @@ function Home() {
                     . All Rights Reserved.
                 </span>
                 <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500  sm:mt-0">
-                    <li>
+                    {/* <li>
                         <a href="#" className="mr-4 hover:underline md:mr-6 ">
                             About
                         </a>
@@ -344,9 +380,12 @@ function Home() {
                         <a href="#" className="mr-4 hover:underline md:mr-6">
                             Licensing
                         </a>
-                    </li>
+                    </li> */}
                     <li>
-                        <a href="#" className="hover:underline">
+                        <a
+                            href="mailto:mustafa.al-quraishi19@imperial.ac.uk"
+                            className="hover:underline"
+                        >
                             Contact
                         </a>
                     </li>

@@ -6,7 +6,7 @@ import Typed from 'react-typed'
 const HomeSearch = () => (
     <div className="flex flex-row">
         <label className="sr-only">Search</label>
-        <div className="relative bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5">
+        <div className="relative bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5">
             <div className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
                 <MagnifyingGlassIcon className="w-4 h-4" />
             </div>
@@ -29,12 +29,12 @@ const HomeSearch = () => (
                 ⌘K
             </div>
         </div>
-        <button
-            type="submit"
-            className="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800"
+        <a
+            href="#start"
+            className="p-2.5 ml-2 text-sm font-medium text-white bg-hot-pink rounded-xl hover:bg-light-hot-pink"
         >
             <MagnifyingGlassIcon className="w-6 h-6" />
-        </button>
+        </a>
     </div>
 )
 

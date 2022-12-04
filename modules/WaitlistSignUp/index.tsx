@@ -112,7 +112,12 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                             onBlur={handleBlur}
                             value={values.email}
                         />
-                        {errors.email && touched.email && <p className="pt-3">{errors.email}</p>}
+
+                        {errors.email && touched.email && (
+                            <p className="pt-1 pb-2 text-sm font-semibold text-center">
+                                {errors.email}
+                            </p>
+                        )}
 
                         <Select
                             options={[
@@ -133,17 +138,20 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                                 className="w-full text-center flex relative rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                             >
                                 {status.success ? 'Signed Up!' : 'Notify Me'}
-                                <div className="absolute right-0 top-0 top-align -mt-1.5 -mr-1.5">
+
+                                <div className="absolute right-0 top-0 top-align -mt-1 -mr-1">
                                     <span className="flex h-3 w-3">
                                         <span
                                             className={setClassNames(
-                                                status.success ? 'bg-green-400' : 'bg-sky-400',
+                                                status.success ? 'bg-zing-green' : 'bg-ice-blue',
                                                 ' animate-ping absolute inline-flex h-full w-full rounded-full opacity-75'
                                             )}
                                         />
                                         <span
                                             className={setClassNames(
-                                                status.success ? 'bg-green-500' : 'bg-sky-400',
+                                                status.success
+                                                    ? 'bg-light-zing-green'
+                                                    : 'bg-light-ice-blue',
                                                 'relative inline-flex rounded-full h-3 w-3 '
                                             )}
                                         />
