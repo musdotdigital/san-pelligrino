@@ -21,10 +21,10 @@ const ProductFeature = (props: Props): React.ReactElement | null => {
                                 'grid grid-cols-1 gap-36'
                             )}
                         >
+                            {children[0]}
                             <div className={setClassNames(layout === '2/3' ? 'sm:col-span-2' : '')}>
-                                {children[0]}
+                                {children[1]}
                             </div>
-                            {children[1]}
                         </div>
                     </div>
                 </div>

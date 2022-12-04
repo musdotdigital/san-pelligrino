@@ -155,14 +155,6 @@ function Home() {
                 </div>
 
                 <TwoColumnFeature layout="2/3">
-                    <div className="rounded-lg overflow-hidden drop-shadow-lg">
-                        <img
-                            alt="/slide-one.png"
-                            src={slideOne}
-                            className="group-hover:opacity-75"
-                            loading="lazy"
-                        />
-                    </div>
                     <div className="col-span-1">
                         <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl sm:mt-36">
                             Ready to level up your research game?
@@ -173,9 +165,27 @@ function Home() {
                             focus on what matters.
                         </p>
                     </div>
+                    <div className="rounded-lg overflow-hidden drop-shadow-lg">
+                        <img
+                            alt="/slide-one.png"
+                            src={slideOne}
+                            className="group-hover:opacity-75"
+                            loading="lazy"
+                        />
+                    </div>
                 </TwoColumnFeature>
 
                 <TwoColumnFeature layout="1/2">
+                    <div className="col-span-1">
+                        <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl">
+                            Too long, don&apos;t want to read?
+                        </h2>
+                        <p className="mt-6 text-md pb-3 text-gray-600 ">
+                            Searching through hundreds of papers can be a pain. We summarise the
+                            most important parts of the paper so you can decide on what is important
+                            to you.
+                        </p>
+                    </div>
                     <div className="flex flex-row space-x-5">
                         <div className="">
                             <div className=" mt-3 rounded-lg p-5 text-sm  leading-6 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -183,6 +193,15 @@ function Home() {
                                     Trends in Data Centre Energy Consumption under the European Code
                                     of Conduct for Data Centre Energy Efficiency
                                 </h5>
+                                <p className="mt-1 text-md text-gray-600 ">
+                                    Maria Avgerinou,{' '}
+                                    <a
+                                        className="hover:underline"
+                                        href="https://www.researchgate.net/publication/319996455_Trends_in_Data_Centre_Energy_Consumption_under_the_European_Code_of_Conduct_for_Data_Centre_Energy_Efficiency"
+                                    >
+                                        et al.
+                                    </a>
+                                </p>
                                 <div className="mt-3">
                                     <span
                                         id="badge-dismiss-default"
@@ -239,21 +258,12 @@ function Home() {
                                         </button>
                                     </span>
                                 </div>
-                                <p className="mt-2 text-md  text-gray-600 ">
-                                    Maria Avgerinou,
-                                    <a
-                                        className="hover:underline"
-                                        href="https://www.researchgate.net/publication/319996455_Trends_in_Data_Centre_Energy_Consumption_under_the_European_Code_of_Conduct_for_Data_Centre_Energy_Efficiency"
-                                    >
-                                        et al.
-                                    </a>
-                                </p>
                             </div>
-                            <div className="pt-5 ">
-                                <div className="flex flex-col relative mt-3 rounded-lg p-5 text-sm leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                            <div className="pt-5">
+                                <div className="flex h-72 sm:h-52 flex-col relative mt-3 rounded-lg p-5 text-sm leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                                     <span
                                         id="badge-dismiss-default"
-                                        className=" w-fit mb-3 items-center py-1 px-2 mr-2 text-sm font-medium text-yellow-800 bg-yellow-100 rounded "
+                                        className="w-fit mb-3 items-center py-1 px-2 mr-2 text-sm font-medium text-yellow-800 bg-yellow-100 rounded "
                                     >
                                         TLDR
                                     </span>
@@ -264,6 +274,7 @@ function Home() {
                                         ]}
                                         typeSpeed={20}
                                     />
+
                                     <div className="absolute right-0 top-0 top-align -mt-1.5 -mr-1.5">
                                         <span className="flex h-3 w-3">
                                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75" />
@@ -274,29 +285,11 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-1">
-                        <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl">
-                            Too long don&apos;t want to read?
-                        </h2>
-                        <p className="mt-6 text-md pb-3 text-gray-600 ">
-                            Searching through hundreds of papers can be a pain. We summarise the
-                            most important parts of the paper so you can decide on what is important
-                            to you.
-                        </p>
-                    </div>
                 </TwoColumnFeature>
 
                 <TwoColumnFeature layout="1/2">
-                    <div className="rounded-lg overflow-hidden drop-shadow-lg">
-                        <img
-                            alt="/slide-one.png"
-                            src={slideOne}
-                            className="group-hover:opacity-75"
-                            loading="lazy"
-                        />
-                    </div>
                     <div className="col-span-1">
-                        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl sm:mt-36">
+                        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl ">
                             Ready to level up your research game?
                         </h2>
                         <p className="mt-6 text-md  text-gray-600 ">
@@ -304,6 +297,14 @@ function Home() {
                             collaborate. All in one place. We handle the boring stuff so you can
                             focus on what matters.
                         </p>
+                    </div>
+                    <div className="rounded-lg overflow-hidden drop-shadow-lg">
+                        <img
+                            alt="/slide-one.png"
+                            src={slideOne}
+                            className="group-hover:opacity-75"
+                            loading="lazy"
+                        />
                     </div>
                 </TwoColumnFeature>
 
