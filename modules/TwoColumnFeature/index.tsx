@@ -12,7 +12,7 @@ const ProductFeature = (props: Props): React.ReactElement | null => {
     if (children.length !== 2) return null
     else
         return (
-            <div className="bg-white sm:py-24">
+            <div className="sm:py-24">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className=" max-w-lg sm:mx-auto md:max-w-none">
                         <div

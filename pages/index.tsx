@@ -32,13 +32,13 @@ function Home() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className="isolate bg-white">
+        <div className="isolate bg-white  text-gray-900  ">
             <div className="px-6 pt-6 lg:px-8">
                 <div>
                     <nav className="flex h-9 items-center justify-between" aria-label="Global">
                         <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
                             <a href="#" className="-m-1.5 p-1.5">
-                                <span className="font-semibold text-gray-900 hover:text-gray-900 text-2xl">
+                                <span className="font-semibold  hover:text-gray-900 text-2xl">
                                     et al.
                                 </span>
                             </a>
@@ -58,7 +58,7 @@ function Home() {
                                 <a
                                     key={item.name}
                                     href={item.href}
-                                    className="font-semibold text-gray-900 hover:text-gray-900"
+                                    className="font-semibold  hover:"
                                 >
                                     {item.name}
                                 </a>
@@ -67,18 +67,18 @@ function Home() {
                         <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
                             <a
                                 href="#"
-                                className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                                className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6  shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                             >
                                 Join Waitlist
                             </a>
                         </div>
                     </nav>
                     <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-                        <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
+                        <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto  px-6 py-6 lg:hidden">
                             <div className="flex h-9 items-center justify-between">
                                 <div className="flex">
                                     <a href="#" className="-m-1.5 p-1.5">
-                                        <span className="font-semibold text-gray-900 hover:text-gray-900 text-2xl">
+                                        <span className="font-semibold  hover:text-gray-900 text-2xl">
                                             et al
                                         </span>
                                     </a>
@@ -164,7 +164,7 @@ function Home() {
                         />
                     </div>
                     <div className="col-span-1">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:mt-36">
+                        <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl sm:mt-36">
                             Ready to level up your research game?
                         </h2>
                         <p className="mt-6 text-md  text-gray-600 ">
@@ -177,39 +177,105 @@ function Home() {
 
                 <TwoColumnFeature layout="1/2">
                     <div className="flex flex-row space-x-5">
-                        <div className="block p-6  rounded-lg drop-shadow-lg border border-gray-200">
-                            <h5 className="text-xl font-bold  text-gray-900 ">
-                                Trends in Data Centre Energy Consumption under the European Code of
-                                Conduct for Data Centre Energy Efficiency
-                            </h5>
+                        <div className="">
+                            <div className=" mt-3 rounded-lg p-5 text-sm  leading-6 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                                <h5 className="text-2xl font-bold tracking-tight ">
+                                    Trends in Data Centre Energy Consumption under the European Code
+                                    of Conduct for Data Centre Energy Efficiency
+                                </h5>
+                                <div className="mt-3">
+                                    <span
+                                        id="badge-dismiss-default"
+                                        className="inline-flex items-center py-1 px-2 mr-2 text-sm font-medium text-blue-800 bg-blue-100 rounded "
+                                    >
+                                        Energy
+                                        <button
+                                            type="button"
+                                            className="inline-flex items-center p-0.5 ml-2 text-sm text-blue-400 bg-transparent rounded-sm hover:bg-blue-200 hover:text-blue-900 "
+                                            data-dismiss-target="#badge-dismiss-default"
+                                            aria-label="Remove"
+                                        >
+                                            <svg
+                                                aria-hidden="true"
+                                                className="w-3.5 h-3.5"
+                                                fill="currentColor"
+                                                viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"
+                                                ></path>
+                                            </svg>
+                                            <span className="sr-only">Remove badge</span>
+                                        </button>
+                                    </span>
+                                    <span
+                                        id="badge-dismiss-default"
+                                        className="inline-flex items-center py-1 px-2 mr-2 text-sm font-medium text-green-800 bg-green-100 rounded "
+                                    >
+                                        Sustainability
+                                        <button
+                                            type="button"
+                                            className="inline-flex items-center p-0.5 ml-2 text-sm text-green-400 bg-transparent rounded-sm hover:bg-green-200 hover:text-blue-900 "
+                                            data-dismiss-target="#badge-dismiss-default"
+                                            aria-label="Remove"
+                                        >
+                                            <svg
+                                                aria-hidden="true"
+                                                className="w-3.5 h-3.5"
+                                                fill="currentColor"
+                                                viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"
+                                                ></path>
+                                            </svg>
+                                            <span className="sr-only">Remove badge</span>
+                                        </button>
+                                    </span>
+                                </div>
+                                <p className="mt-2 text-md  text-gray-600 ">
+                                    Maria Avgerinou,
+                                    <a
+                                        className="hover:underline"
+                                        href="https://www.researchgate.net/publication/319996455_Trends_in_Data_Centre_Energy_Consumption_under_the_European_Code_of_Conduct_for_Data_Centre_Energy_Efficiency"
+                                    >
+                                        et al.
+                                    </a>
+                                </p>
+                            </div>
+                            <div className="pt-5 ">
+                                <div className="flex flex-col relative mt-3 rounded-lg p-5 text-sm leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                                    <span
+                                        id="badge-dismiss-default"
+                                        className=" w-fit mb-3 items-center py-1 px-2 mr-2 text-sm font-medium text-yellow-800 bg-yellow-100 rounded "
+                                    >
+                                        TLDR
+                                    </span>
 
-                            <p className="mt-6 text-sm text-gray-600 ">
-                                Climate change is recognised as one of the key challenges humankind
-                                is facing. The Information and Communication Technology (ICT) sector
-                                including data centres generates up to 2% of the global CO2
-                                emissions, a number on par to the aviation sector contribution, and
-                                data centres are estimated to have the fastest growing carbon
-                                footprint from across the whole ICT sector, mainly due to
-                                technological advances such as the cloud computing and the rapid
-                                growth of the use of Internet services. There are no recent
-                                estimations of the total energy consumption of the European data
-                                centre and of their energy efficiency. The aim of this paper is to
-                                evaluate, analyse and present the current trends in energy
-                                consumption and efficiency in data centres in the European Union
-                                using the data submitted by companies participating in the European
-                                Code of Conduct for Data Centre Energy Efficiency programme, a
-                                voluntary initiative created in 2008 in response to the increasing
-                                energy consumption in data centres and the need to reduce the
-                                related environmental, economic and energy supply security impacts.
-                                The analysis shows that the average Power Usage Effectiveness (PUE)
-                                of the facilities participating in the programme is declining year
-                                after year. This confirms that voluntary approaches could be
-                                effective in addressing climate and energy issue.
-                            </p>
+                                    <Typed
+                                        strings={[
+                                            'Data centres are a major contributor to global CO2 emissions, and this paper evaluated the current trends in energy consumption and efficiency in data centres in the European Union. The analysis showed a decreasing Power Usage Effectiveness (PUE), indicating that voluntary approaches can be effective in addressing climate and energy issues.'
+                                        ]}
+                                        typeSpeed={20}
+                                    />
+                                    <div className="absolute right-0 top-0 top-align -mt-1.5 -mr-1.5">
+                                        <span className="flex h-3 w-3">
+                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75" />
+                                            <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500" />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="col-span-1">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                        <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl">
                             Too long don&apos;t want to read?
                         </h2>
                         <p className="mt-6 text-md pb-3 text-gray-600 ">
@@ -217,32 +283,33 @@ function Home() {
                             most important parts of the paper so you can decide on what is important
                             to you.
                         </p>
-                        <button
-                            onClick={() => {}}
-                            className="flex relative mt-3 rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
-                        >
-                            TLDR this paper
-                            <div className="absolute right-0 top-0 top-align -mt-1.5 -mr-1.5">
-                                <span className="flex h-3 w-3">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75" />
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500" />
-                                </span>
-                            </div>
-                        </button>
-                        <div className="pt-5">
-                            <Typed
-                                strings={[
-                                    'Data centres are a major contributor to global CO2 emissions, and this paper evaluated the current trends in energy consumption and efficiency in data centres in the European Union. The analysis showed a decreasing Power Usage Effectiveness (PUE), indicating that voluntary approaches can be effective in addressing climate and energy issues.'
-                                ]}
-                                typeSpeed={20}
-                            />
-                        </div>
                     </div>
                 </TwoColumnFeature>
 
-                <div className="bg-gray-50">
+                <TwoColumnFeature layout="1/2">
+                    <div className="rounded-lg overflow-hidden drop-shadow-lg">
+                        <img
+                            alt="/slide-one.png"
+                            src={slideOne}
+                            className="group-hover:opacity-75"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div className="col-span-1">
+                        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl sm:mt-36">
+                            Ready to level up your research game?
+                        </h2>
+                        <p className="mt-6 text-md  text-gray-600 ">
+                            The platform to search for papers, organise your research and
+                            collaborate. All in one place. We handle the boring stuff so you can
+                            focus on what matters.
+                        </p>
+                    </div>
+                </TwoColumnFeature>
+
+                <div className="">
                     <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8 ">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
                             <span className="block">Ready to level up your research game?</span>
                             <span className="block text-indigo-600">Sign up to the waitlist.</span>
                         </h2>
@@ -253,7 +320,7 @@ function Home() {
                 </div>
             </main>
 
-            <footer className="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6">
+            <footer className="p-4 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6">
                 <span className="text-sm text-gray-500 sm:text-center ">
                     © 2022{' '}
                     <a href="https://flowbite.com/" className="hover:underline">

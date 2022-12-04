@@ -112,7 +112,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                             onBlur={handleBlur}
                             value={values.email}
                         />
-                        <p className="py-3">{errors.email && touched.email && errors.email}</p>
+                        {errors.email && touched.email && <p className="pt-3">{errors.email}</p>}
 
                         <Select
                             options={[

@@ -32,7 +32,7 @@ const Select = (props: Props) => {
                         </Listbox.Label>
 
                         <div className="relative mt-1">
-                            <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2  pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+                            <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 py-2  pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
                                 <span className="flex items-center">
                                     <span className="ml-3 block truncate">{selected}</span>
                                 </span>
@@ -51,7 +51,7 @@ const Select = (props: Props) => {
                                 leaveFrom="opacity-100"
                                 leaveTo="opacity-0"
                             >
-                                <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                                <Listbox.Options className="absolute z-10 mt-1 max-h-28 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                                     {options.map((opp, key) => (
                                         <Listbox.Option
                                             key={key}
