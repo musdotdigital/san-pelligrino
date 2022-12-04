@@ -333,7 +333,7 @@ function Home() {
                             papers, leave notes and plan your future reads for all of your projects.
                         </p>
                     </div>
-                    <div className="rounded-xl overflow-hidden drop-shadow-lg">
+                    <div className="rounded-xl drop-shadow-lg">
                         <img
                             alt="/slide-one.png"
                             src={slideOne}
