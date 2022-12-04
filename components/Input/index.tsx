@@ -13,7 +13,7 @@ type Props = {
 const Input = (props: Props) => {
     const { name, placeholder, onChange, onBlur, value, type, label } = props
     return (
-        <div className="pb-3">
+        <div className="pb-2">
             <label htmlFor="price" className="block text-sm font-medium text-gray-700">
                 {label}
             </label>
@@ -28,7 +28,7 @@ const Input = (props: Props) => {
                     onChange={onChange}
                     onBlur={onBlur}
                     value={value}
-                    className="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                    className="block w-full rounded-md border-gray-300 pl-3 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                 />
                 {/* <div className="absolute inset-y-0 right-0 flex items-center">
                     <label htmlFor="currency" className="sr-only">
