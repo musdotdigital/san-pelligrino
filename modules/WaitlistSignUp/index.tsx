@@ -117,7 +117,9 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                         />
 
                         {errors.email && touched.email && (
-                            <p className="pt-1 pb-2 text-sm font-semibold">{errors.email}</p>
+                            <p className="pt-1 pb-2 text-sm font-semibold dark:text-white">
+                                {errors.email}
+                            </p>
                         )}
 
                         <Select
@@ -136,9 +138,9 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                             <Field
                                 type="checkbox"
                                 name="gdpr"
-                                className=" mr-2 rounded-md  text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                                className=" mr-2 rounded-md  text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:ring-white/30 dark:hover:ring-white/50"
                             />
-                            <p className="text-sm text-gray-600">
+                            <p className="text-sm text-gray-600 dark:text-gray-300">
                                 I agree to the et al.{' '}
                                 <a
                                     href="https://www.notion.so/Privacy-Policy-7536f07a27d845558d0dad5ba0850812"
@@ -155,7 +157,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                             <button
                                 disabled={isSubmitting || status.success}
                                 type="submit"
-                                className="w-full text-center flex relative rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                                className="w-full text-center flex relative rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 dark:text-white shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:ring-white/30 dark:hover:ring-white/50"
                             >
                                 {status.success ? 'Signed Up!' : 'Notify Me'}
 

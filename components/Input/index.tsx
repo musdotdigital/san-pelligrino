@@ -14,7 +14,10 @@ const Input = (props: Props) => {
     const { name, placeholder, onChange, onBlur, value, type, label } = props
     return (
         <div className="pb-2">
-            <label htmlFor="price" className="block text-sm font-medium text-gray-700">
+            <label
+                htmlFor="price"
+                className="block text-sm font-medium text-gray-700 dark:text-white"
+            >
                 {label}
             </label>
             <div className="relative mt-1 rounded-md shadow-sm">

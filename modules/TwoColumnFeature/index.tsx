@@ -17,7 +17,7 @@ const ProductFeature = (props: Props): React.ReactElement | null => {
         return (
             <div className={setClassNames(className, 'pb-24')}>
                 <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
-                    <div className=" max-w-lg sm:mx-auto md:max-w-none">
+                    <div className=" max-w-lg sm:mx-auto md:max-w-none dark:text-white">
                         {!single ? (
                             <div
                                 className={setClassNames(

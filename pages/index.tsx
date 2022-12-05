@@ -32,13 +32,13 @@ function Home() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className="isolate bg-white  text-gray-900  ">
+        <div className="isolate bg-white  text-gray-900  dark:bg-black">
             <div className="px-8 pt-6 lg:px-8">
                 <div>
                     <nav className="flex h-9 items-center justify-between" aria-label="Global">
                         <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
                             <a href="#" className="-m-1.5 p-1.5">
-                                <span className="font-semibold  hover:text-gray-900 text-2xl">
+                                <span className="font-semibold  hover:text-gray-900 dark:hover:text-ice-blue text-2xl dark:text-white">
                                     et al.
                                 </span>
                             </a>
@@ -67,18 +67,18 @@ function Home() {
                         <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
                             <a
                                 href="#waitlist"
-                                className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6  shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                                className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold dark:text-white leading-6  shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:ring-white/30 dark:hover:ring-white/50"
                             >
                                 Join Waitlist
                             </a>
                         </div>
                     </nav>
                     <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-                        <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto  px-6 py-6 lg:hidden bg-white">
+                        <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto  px-6 py-6 lg:hidden bg-white dark:bg-black">
                             <div className="flex h-9 items-center justify-between">
                                 <div className="flex">
                                     <a href="#" className="-m-1.5 p-1.5">
-                                        <span className="font-semibold  hover:text-gray-900 text-2xl">
+                                        <span className="font-semibold  hover:text-gray-900 dark:text-white dark:hover:text-ice-blue text-2xl">
                                             et al
                                         </span>
                                     </a>
@@ -86,7 +86,7 @@ function Home() {
                                 <div className="flex">
                                     <button
                                         type="button"
-                                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-white "
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
                                         <span className="sr-only">Close menu</span>
@@ -95,7 +95,7 @@ function Home() {
                                 </div>
                             </div>
                             <div className="mt-6 flow-root">
-                                <div className="-my-6 divide-y divide-gray-500/10">
+                                <div className="-my-6 divide-y divide-gray-500/10 dark:divide-blue-50">
                                     <div className="space-y-2 py-6">
                                         {/* {navigation.map(item => (
                                             <a
@@ -111,7 +111,7 @@ function Home() {
                                         <a
                                             href="#waitlist"
                                             onClick={() => setMobileMenuOpen(false)}
-                                            className="-mx-3 block rounded-xl py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
+                                            className="-mx-3 block rounded-xl py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10 dark:text-white "
                                         >
                                             Join Waitlist
                                         </a>
@@ -148,7 +148,7 @@ function Home() {
                                     <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
                                         Make sense of the chaos.
                                     </h1>
-                                    <p className="mt-6 text-md text-gray-600 ">
+                                    <p className="mt-6 text-md text-gray-600 dark:text-gray-300">
                                         The platform to{' '}
                                         <span className="bg-zing-green bg-opacity-40 py-1 rounded-sm">
                                             find
@@ -163,7 +163,7 @@ function Home() {
                                         </span>{' '}
                                         your research - all in one place.
                                     </p>
-                                    <p className="text-md text-gray-600 ">
+                                    <p className="text-md text-gray-600 dark:text-gray-300">
                                         We handle the chaos so you can focus on what matters.
                                     </p>
                                 </div>
@@ -188,7 +188,7 @@ function Home() {
                             </span>
                             , but done better.
                         </h2>
-                        <p className="mt-6 text-md text-gray-600 ">
+                        <p className="mt-6 text-md text-gray-600 dark:text-gray-300">
                             Finding the right paper is an art form. We pair keywords and provide
                             suggestions to help you search the field.
                         </p>
@@ -203,14 +203,14 @@ function Home() {
                     </div>
                 </TwoColumnFeature>
                 <TwoColumnFeature layout="2/3" inverse>
-                    <div className="flex flex-row space-x-5 justify-center">
+                    <div className="flex flex-row space-x-5 justify-center dark:text-white">
                         <div className="">
-                            <div className=" max-w-lg mt-3 rounded-xl p-5 text-sm  leading-6 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                            <div className=" max-w-lg mt-3 rounded-xl p-5 text-sm  leading-6 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:ring-white/30 dark:hover:ring-white/50">
                                 <h5 className="text-2xl font-bold tracking-tight ">
                                     Trends in Data Centre Energy Consumption under the European Code
                                     of Conduct for Data Centre Energy Efficiency
                                 </h5>
-                                <p className="mt-1 text-md text-gray-600 ">
+                                <p className="mt-1 text-md text-gray-600 dark:text-gray-300 ">
                                     Maria Avgerinou,{' '}
                                     <a
                                         className="hover:underline"
@@ -222,7 +222,7 @@ function Home() {
                                 <div className="mt-3">
                                     <span
                                         id="badge-dismiss-default"
-                                        className="inline-flex items-center py-1 px-2 mr-2 text-sm text-white font-medium bg-hot-pink  rounded "
+                                        className="inline-flex items-center py-1 px-2 mr-2 text-sm font-medium bg-hot-pink  rounded "
                                     >
                                         Energy
                                         <button
@@ -249,7 +249,7 @@ function Home() {
                                     </span>
                                     <span
                                         id="badge-dismiss-default"
-                                        className="inline-flex items-center py-1 px-2 mr-2 text-sm font-medium  bg-royal-blue rounded text-white"
+                                        className="inline-flex items-center py-1 px-2 mr-2 text-sm font-medium  bg-royal-blue rounded "
                                     >
                                         Sustainability
                                         <button
@@ -277,7 +277,7 @@ function Home() {
                                 </div>
                             </div>
                             <div className="pt-5 max-w-lg">
-                                <div className="flex h-72 sm:h-52 flex-col relative mt-3 rounded-xl p-5 text-sm leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                                <div className="flex h-72 sm:h-52 flex-col relative mt-3 rounded-xl p-5 text-sm leading-6 text-gray-900 dark:text-white shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:ring-white/30 dark:hover:ring-white/50">
                                     <span
                                         id="badge-dismiss-default"
                                         className="w-fit mb-3 items-center py-1 px-2 mr-2 text-sm font-medium text-white bg-light-ice-blue  rounded "
@@ -304,12 +304,12 @@ function Home() {
                     </div>
                     <div className="col-span-1">
                         <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl">
-                            <span className="bg-royal-blue bg-opacity-40 py-1 rounded-sm">
+                            <span className="bg-royal-blue dark:bg-hot-pink bg-opacity-40 py-1 rounded-sm">
                                 Too long,
                             </span>{' '}
                             don&apos;t want to read?
                         </h2>
-                        <p className="mt-6 text-md pb-3 text-gray-600 ">
+                        <p className="mt-6 text-md pb-3 text-gray-600 dark:text-gray-300">
                             Searching through hundreds of papers can be a pain. We are building the
                             next level of AI for academic research that summarises papers - so you
                             can decide what is important to you.
@@ -318,7 +318,7 @@ function Home() {
                 </TwoColumnFeature>
                 <TwoColumnFeature layout="2/3">
                     <div className="col-span-1">
-                        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl ">
+                        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl dark:text-white">
                             <span className="bg-ice-blue bg-opacity-40 py-1 rounded-sm">Track</span>
                             ,{' '}
                             <span className="bg-ice-blue bg-opacity-40 py-1 rounded-sm">
@@ -330,7 +330,7 @@ function Home() {
                             </span>{' '}
                             {/* on your research. */}
                         </h2>
-                        <p className="mt-6 text-md  text-gray-600 ">
+                        <p className="mt-6 text-md  text-gray-600 dark:text-gray-300">
                             Whether you are a lone researcher or in a team, you can save papers,
                             leave notes, and plan future reads for all of your projects.
                         </p>
@@ -344,10 +344,12 @@ function Home() {
                         />
                     </div>
                 </TwoColumnFeature>
-                <div className=" rounded-xl bg-gray-50" id="waitlist">
+                <div className=" rounded-t-lg bg-gray-50 dark:bg-black" id="waitlist">
                     <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8 ">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                            <span className="block">Ready to level up your research game?</span>
+                            <span className="block dark:text-white">
+                                Ready to level up your research game?
+                            </span>
                             <span className="block text-hot-pink">Sign up to the waitlist.</span>
                         </h2>
                         <div className="mt-8 sm:flex lg:mt-0 lg:flex-shrink-0 ">
@@ -357,15 +359,15 @@ function Home() {
                 </div>
             </main>
 
-            <footer className="p-4  md:flex md:items-center md:justify-between md:p-6 bg-gray-50">
-                <span className="text-sm text-gray-500 sm:text-center ">
+            <footer className="p-4  md:flex md:items-center md:justify-between md:p-6 bg-gray-50 dark:bg-black text-gray-500 dark:text-white ">
+                <span className="text-sm  sm:text-center">
                     © 2022{' '}
                     <a href="https://flowbite.com/" className="hover:underline">
                         et al
                     </a>
                     . All Rights Reserved.
                 </span>
-                <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500  sm:mt-0">
+                <ul className="flex flex-wrap items-center mt-3 text-sm  sm:mt-0">
                     {/* <li>
                         <a href="#" className="mr-4 hover:underline md:mr-6 ">
                             About
