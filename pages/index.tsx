@@ -109,10 +109,11 @@ function Home() {
                                     </div>
                                     <div className="py-6">
                                         <a
-                                            href="#"
+                                            href="#waitlist"
+                                            onClick={() => setMobileMenuOpen(false)}
                                             className="-mx-3 block rounded-xl py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                                         >
-                                            Join the Waitlist
+                                            Join Waitlist
                                         </a>
                                     </div>
                                 </div>
