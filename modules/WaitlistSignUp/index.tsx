@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { PostgrestError, SupabaseClient } from '@supabase/supabase-js'
-import { Formik, FormikHelpers } from 'formik'
-import { object, string } from 'yup'
+import { Field, Formik, FormikHelpers } from 'formik'
+import { boolean, object, string } from 'yup'
 
 import Input from '../../components/Input'
 import Select from '../../components/Select'
@@ -21,13 +21,15 @@ const occupations = [
 type occupationTypes = typeof occupations[number]
 
 const validationSchema = object().shape({
-    email: string().email('Please enter a valid email').required('Please enter an email 🤠')
+    email: string().email('Please enter a valid email').required('Please enter an email 🤠'),
+    gdpr: boolean().oneOf([true], 'Please tick to agree with our terms ✔️')
 })
 
 interface FormValues {
     email: string
     firstName: string
     occupation: occupationTypes
+    gdpr: boolean
 }
 
 const handleWatchListErrors = (error: PostgrestError) => {
@@ -70,7 +72,8 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
     const initialValues: FormValues = {
         email: '',
         firstName: '',
-        occupation: occupations[0]
+        occupation: occupations[0],
+        gdpr: false
     }
 
     return (
@@ -114,9 +117,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                         />
 
                         {errors.email && touched.email && (
-                            <p className="pt-1 pb-2 text-sm font-semibold text-center">
-                                {errors.email}
-                            </p>
+                            <p className="pt-1 pb-2 text-sm font-semibold">{errors.email}</p>
                         )}
 
                         <Select
@@ -131,6 +132,25 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                             ]}
                             name="occupation"
                         />
+                        <div className="flex flew-row w-full py-2">
+                            <Field
+                                type="checkbox"
+                                name="gdpr"
+                                className=" mr-2 rounded-md  text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                            />
+                            <p className="text-sm text-gray-600">
+                                I agree to the et al.{' '}
+                                <a
+                                    href="https://www.notion.so/Privacy-Policy-7536f07a27d845558d0dad5ba0850812"
+                                    className=" underline"
+                                >
+                                    terms and privacy policy.
+                                </a>
+                            </p>
+                        </div>
+                        {errors.gdpr && touched.gdpr && (
+                            <p className="pt-1 pb-2 text-sm font-semibold ">{errors.gdpr}</p>
+                        )}
                         <div className="flex justify-center pt-4 ">
                             <button
                                 disabled={isSubmitting || status.success}
