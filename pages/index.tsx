@@ -282,7 +282,7 @@ function Home() {
                                         id="badge-dismiss-default"
                                         className="w-fit mb-3 items-center py-1 px-2 mr-2 text-sm font-medium text-white bg-light-ice-blue  rounded "
                                     >
-                                        Energy
+                                        TLDR
                                     </span>
 
                                     <Typed
