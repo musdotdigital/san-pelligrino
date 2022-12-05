@@ -280,7 +280,7 @@ function Home() {
                                 <div className="flex h-72 sm:h-52 flex-col relative mt-3 rounded-xl p-5 text-sm leading-6 text-gray-900 dark:text-white shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:ring-white/30 dark:hover:ring-white/50">
                                     <span
                                         id="badge-dismiss-default"
-                                        className="w-fit mb-3 items-center py-1 px-2 mr-2 text-sm font-medium text-white bg-light-ice-blue  rounded "
+                                        className="w-fit mb-3 items-center py-1 px-2 mr-2 text-sm font-medium text-white bg-light-ice-blue dark:bg-sky-500  rounded "
                                     >
                                         TLDR
                                     </span>
