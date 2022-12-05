@@ -46,7 +46,7 @@ function Home() {
                         <div className="flex lg:hidden">
                             <button
                                 type="button"
-                                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-white"
                                 onClick={() => setMobileMenuOpen(true)}
                             >
                                 <span className="sr-only">Open main menu</span>
@@ -74,12 +74,12 @@ function Home() {
                         </div>
                     </nav>
                     <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-                        <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto  px-6 py-6 lg:hidden bg-white dark:bg-black">
+                        <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto  px-8 py-6 lg:hidden bg-white dark:bg-black">
                             <div className="flex h-9 items-center justify-between">
                                 <div className="flex">
                                     <a href="#" className="-m-1.5 p-1.5">
                                         <span className="font-semibold  hover:text-gray-900 dark:text-white dark:hover:text-ice-blue text-2xl">
-                                            et al
+                                            et al.
                                         </span>
                                     </a>
                                 </div>
