@@ -22,7 +22,7 @@ const HomeSearch = () => (
                         loop
                     />
                 </div>
-                <div className="sm:hidden">Data centre energy consumption....</div>
+                <div className="sm:hidden">Data centre energy...</div>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400">
                 ⌘K

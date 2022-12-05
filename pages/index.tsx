@@ -126,7 +126,7 @@ function Home() {
                     <div className="relative px-6 lg:px-8">
                         <div className="mx-auto max-w-3xl text-center">
                             <div>
-                                <div className="hidden lg:mb-8 sm:flex w-full  justify-center">
+                                {/* <div className="hidden lg:mb-8 sm:flex w-full  justify-center">
                                     <div className="mb-4 md:mb-0 relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                                         <span className="text-gray-600">
                                             Researching has never been so easy.{' '}
@@ -142,30 +142,32 @@ function Home() {
                                             </a>
                                         </span>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div>
                                     <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-                                        Level up your research game.
+                                        Make sense of the chaos.
                                     </h1>
                                     <p className="mt-6 text-md text-gray-600 ">
                                         The platform to{' '}
                                         <span className="bg-zing-green bg-opacity-40 py-1 rounded-sm">
-                                            search
-                                        </span>{' '}
-                                        for papers ,{' '}
-                                        <span className="bg-royal-blue bg-opacity-40 py-1 rounded-sm">
-                                            organise
-                                        </span>{' '}
-                                        your research and{' '}
-                                        <span className="bg-ice-blue bg-opacity-40 py-1 rounded-sm">
-                                            collaborate
+                                            find
                                         </span>
-                                        . All in one place. We handle the boring stuff so you can
-                                        focus on what matters.
+                                        ,{' '}
+                                        <span className="bg-zing-green bg-opacity-40 py-1 rounded-sm">
+                                            visualise
+                                        </span>
+                                        , and{' '}
+                                        <span className="bg-zing-green bg-opacity-40 py-1 rounded-sm">
+                                            track
+                                        </span>{' '}
+                                        your research - all in one place.
+                                    </p>
+                                    <p className="text-md text-gray-600 ">
+                                        We handle the chaos so you can focus on what matters.
                                     </p>
                                 </div>
 
-                                <div className="mx-auto pt-12 max-w-lg">
+                                <div className="mx-auto pt-6 max-w-lg">
                                     <HomeSearch />
                                 </div>
                             </div>
@@ -176,18 +178,18 @@ function Home() {
                     </div> */}
                     <></>
                 </TwoColumnFeature>
-                <div className="sm:py-12" /> {/* REMOVE PENDING ART */}
+                <div className="sm:py-16" /> {/* REMOVE PENDING ART */}
                 <TwoColumnFeature layout="2/3">
                     <div className="col-span-1" id="start">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:mt-24">
-                            <span className="bg-zing-green bg-opacity-40 py-1 rounded-sm">
+                            <span className="bg-ice-blue bg-opacity-40 py-1 rounded-sm">
                                 Search
-                            </span>{' '}
+                            </span>
                             , but done better.
                         </h2>
                         <p className="mt-6 text-md text-gray-600 ">
-                            Finding the right paper is an art form. We pair keywords, authors and
-                            provide suggestions to help you search the field.
+                            Finding the right paper is an art form. We pair keywords and provide
+                            suggestions to help you search the field.
                         </p>
                     </div>
                     <div className="rounded-xl drop-shadow-lg">
@@ -308,29 +310,28 @@ function Home() {
                         </h2>
                         <p className="mt-6 text-md pb-3 text-gray-600 ">
                             Searching through hundreds of papers can be a pain. We are building the
-                            most sophisticated AI with academia in mind to summarise the most
-                            important parts of the paper, so you can decide on what is important to
-                            you.
+                            next level of AI for academic research that summarises papers - so you
+                            can decide what is important to you.
                         </p>
                     </div>
                 </TwoColumnFeature>
                 <TwoColumnFeature layout="2/3">
                     <div className="col-span-1">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl ">
-                            <span className="bg-ice-blue bg-opacity-40 py-1 rounded-sm">Track</span>{' '}
+                            <span className="bg-ice-blue bg-opacity-40 py-1 rounded-sm">Track</span>
                             ,{' '}
                             <span className="bg-ice-blue bg-opacity-40 py-1 rounded-sm">
                                 organise
-                            </span>{' '}
-                            and{' '}
+                            </span>
+                            , and{' '}
                             <span className="bg-ice-blue bg-opacity-40 py-1 rounded-sm">
-                                collaborate,
+                                collaborate.
                             </span>{' '}
-                            on your research.
+                            {/* on your research. */}
                         </h2>
                         <p className="mt-6 text-md  text-gray-600 ">
-                            Whether you are a lone researcher or in a team, you can save your
-                            papers, leave notes and plan your future reads for all of your projects.
+                            Whether you are a lone researcher or in a team, you can save papers,
+                            leave notes, and plan future reads for all of your projects.
                         </p>
                     </div>
                     <div className="rounded-xl drop-shadow-lg">
