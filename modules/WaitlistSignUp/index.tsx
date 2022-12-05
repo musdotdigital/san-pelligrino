@@ -94,20 +94,20 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                 <div className="flex flex-col justify-center">
                     <form onSubmit={handleSubmit}>
                         <Input
-                            label="What should we call you?"
+                            label="Name?"
                             type="text"
                             name="firstName"
-                            placeholder="What's your name?"
+                            placeholder="What should we call you?"
                             onChange={handleChange}
                             onBlur={handleBlur}
                             value={values.firstName}
                         />
 
                         <Input
-                            label="Your email"
+                            label="Email Address"
                             type="email"
                             name="email"
-                            placeholder="Email Address"
+                            placeholder="Your email?"
                             onChange={handleChange}
                             onBlur={handleBlur}
                             value={values.email}
