@@ -7,7 +7,7 @@ import type { AppProps } from 'next/app'
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <>
-            <Component {...pageProps} />
+            <Component {...pageProps} className="dark:not()" />
             <Analytics />
         </>
     )

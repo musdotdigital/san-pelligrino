@@ -222,7 +222,7 @@ function Home() {
                                 <div className="mt-3">
                                     <span
                                         id="badge-dismiss-default"
-                                        className="inline-flex items-center py-1 px-2 mr-2 text-sm font-medium bg-hot-pink  rounded "
+                                        className="text-white inline-flex items-center py-1 px-2 mr-2 text-sm font-medium bg-hot-pink  rounded "
                                     >
                                         Energy
                                         <button
@@ -249,7 +249,7 @@ function Home() {
                                     </span>
                                     <span
                                         id="badge-dismiss-default"
-                                        className="inline-flex items-center py-1 px-2 mr-2 text-sm font-medium  bg-royal-blue rounded "
+                                        className="text-white inline-flex items-center py-1 px-2 mr-2 text-sm font-medium  bg-royal-blue rounded "
                                     >
                                         Sustainability
                                         <button
