@@ -382,10 +382,7 @@ function Home() {
                         </a>
                     </li> */}
                     <li>
-                        <a
-                            href="mailto:mustafa.al-quraishi19@imperial.ac.uk"
-                            className="hover:underline"
-                        >
+                        <a href="mailto:hello@etal-team.com" className="hover:underline">
                             Contact
                         </a>
                     </li>
