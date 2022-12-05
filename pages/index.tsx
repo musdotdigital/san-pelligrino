@@ -8,7 +8,7 @@ import Typed from 'react-typed'
 import HomeSearch from '../modules/HomeSearch/'
 import TwoColumnFeature from '../modules/TwoColumnFeature'
 import WatilistSignUp from '../modules/WaitlistSignUp/index'
-import { slideOne } from '../src/images'
+import { slideOne, slideTwo } from '../src/images'
 import { Database } from '../types/supabase'
 
 if (!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
@@ -195,7 +195,7 @@ function Home() {
                     </div>
                     <div className="rounded-xl drop-shadow-lg">
                         <img
-                            alt="/slide-one.png"
+                            alt="Search view"
                             src={slideOne}
                             className="group-hover:opacity-75"
                             loading="lazy"
@@ -337,8 +337,8 @@ function Home() {
                     </div>
                     <div className="rounded-xl drop-shadow-lg">
                         <img
-                            alt="/slide-one.png"
-                            src={slideOne}
+                            alt="Collab view"
+                            src={slideTwo}
                             className="group-hover:opacity-75"
                             loading="lazy"
                         />
