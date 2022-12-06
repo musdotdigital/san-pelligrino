@@ -44,17 +44,20 @@ const handlePostgresErrors = (error: PostgrestError) => {
     }
 }
 
-const signUpSuccess = ({ setStatus, setValues }: Partial<FormikHelpers<FormValues>>) => {
-    setStatus && setStatus({ success: true })
-    setValues && setValues({ firstName: '', email: '', occupation: occupations[0], gdpr: false })
+const signUpSuccess = ({
+    setStatus,
+    setValues
+}: Pick<FormikHelpers<FormValues>, 'setStatus' | 'setValues'>) => {
+    setStatus({ success: true })
+    setValues({ firstName: '', email: '', occupation: occupations[0], gdpr: false })
 }
 
 const signUpFailure = ({
     setStatus,
     error
-}: Partial<FormikHelpers<FormValues>> & { error: PostgrestError }) => {
+}: Pick<FormikHelpers<FormValues>, 'setStatus'> & { error: PostgrestError }) => {
     Sentry.captureException(error)
-    setStatus && setStatus({ formError: handlePostgresErrors(error) })
+    setStatus({ formError: handlePostgresErrors(error) })
 }
 
 const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
