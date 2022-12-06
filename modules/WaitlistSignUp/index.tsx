@@ -43,10 +43,15 @@ const handleWatchListErrors = (error: PostgrestError) => {
     }
 }
 
+const successFullSignUp = ({ setStatus, setValues }: Partial<FormikHelpers<FormValues>>) => {
+    setStatus && setStatus({ success: true })
+    setValues && setValues({ firstName: '', email: '', occupation: occupations[0], gdpr: false })
+}
+
 const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
     const addToWatchlist = async (
         { email, firstName, occupation }: FormValues,
-        { setStatus, setSubmitting }: FormikHelpers<FormValues>
+        { setStatus, setSubmitting, setValues }: FormikHelpers<FormValues>
     ) => {
         try {
             await supabase
@@ -58,7 +63,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                 })
                 .then(res => {
                     res.data === null && res.error === null
-                        ? setStatus({ success: true }) // success
+                        ? successFullSignUp({ setValues, setStatus }) // success
                         : res.error && setStatus({ formError: handleWatchListErrors(res.error) }) // error
                     setSubmitting(false)
                 })
@@ -116,7 +121,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                             value={values.email}
                         />
 
-                        {errors.email && touched.email && (
+                        {errors.email && touched.email && !status.success && (
                             <p className="pt-1 pb-2 text-sm font-semibold dark:text-white">
                                 {errors.email}
                             </p>
@@ -150,7 +155,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                                 </a>
                             </p>
                         </div>
-                        {errors.gdpr && touched.gdpr && (
+                        {errors.gdpr && touched.gdpr && !status.success && (
                             <p className="pt-1 pb-2 text-sm font-semibold ">{errors.gdpr}</p>
                         )}
                         <div className="flex justify-center pt-4 ">
@@ -181,7 +186,9 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                                 </div>
                             </button>
                         </div>
-                        <p className="mt-3">{status && status.formError && status.formError}</p>
+                        <p className="mt-3">
+                            {status && status.formError && !status.success && status.formError}
+                        </p>
                     </form>
                 </div>
             )}
