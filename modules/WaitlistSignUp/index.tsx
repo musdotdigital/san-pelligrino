@@ -1,6 +1,6 @@
 import React from 'react'
 
-import sentry from '@sentry/nextjs'
+import * as Sentry from '@sentry/nextjs'
 import { PostgrestError, SupabaseClient } from '@supabase/supabase-js'
 import { Field, Formik, FormikHelpers } from 'formik'
 import { boolean, object, string } from 'yup'
@@ -70,7 +70,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                 })
         } catch (e) {
             console.log(e)
-            sentry.captureException(e)
+            Sentry.captureException(e)
             setStatus({ formError: '😧 Sorry there was an error, please try again' })
             setSubmitting(false)
         }
