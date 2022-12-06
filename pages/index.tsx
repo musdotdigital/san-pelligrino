@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { createClient } from '@supabase/supabase-js'
+import Image from 'next/image'
 import Typed from 'react-typed'
 
 import HomeSearch from '../modules/HomeSearch/'
@@ -194,11 +195,13 @@ function Home() {
                         </p>
                     </div>
                     <div className="rounded-xl drop-shadow-lg">
-                        <img
+                        <Image
                             alt="Search view"
                             src={slideOne}
                             className="group-hover:opacity-75"
                             loading="lazy"
+                            width={1200}
+                            height={800}
                         />
                     </div>
                 </TwoColumnFeature>
@@ -336,11 +339,13 @@ function Home() {
                         </p>
                     </div>
                     <div className="rounded-xl drop-shadow-lg">
-                        <img
+                        <Image
                             alt="Collab view"
                             src={slideTwo}
                             className="group-hover:opacity-75"
                             loading="lazy"
+                            width={1200}
+                            height={800}
                         />
                     </div>
                 </TwoColumnFeature>
