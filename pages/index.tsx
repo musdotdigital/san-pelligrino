@@ -308,9 +308,9 @@ function Home() {
                     <div className="col-span-1">
                         <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl">
                             <span className="bg-royal-blue dark:bg-hot-pink bg-opacity-40 py-1 rounded-sm">
-                                Too long,
-                            </span>{' '}
-                            don&apos;t want to read?
+                                Too long
+                            </span>
+                            , don&apos;t want to read?
                         </h2>
                         <p className="mt-6 text-md pb-3 text-gray-600 dark:text-gray-300">
                             Searching through hundreds of papers can be a pain. We are building the
