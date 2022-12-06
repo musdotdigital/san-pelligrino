@@ -33,7 +33,7 @@ interface FormValues {
     gdpr: boolean
 }
 
-const handleWatchListErrors = (error: PostgrestError) => {
+const handlePostgresErrors = (error: PostgrestError) => {
     switch (error.code) {
         case '23505':
             return 'You are already on the waitlist! 🎉'
@@ -44,9 +44,17 @@ const handleWatchListErrors = (error: PostgrestError) => {
     }
 }
 
-const successFullSignUp = ({ setStatus, setValues }: Partial<FormikHelpers<FormValues>>) => {
+const signUpSuccess = ({ setStatus, setValues }: Partial<FormikHelpers<FormValues>>) => {
     setStatus && setStatus({ success: true })
     setValues && setValues({ firstName: '', email: '', occupation: occupations[0], gdpr: false })
+}
+
+const signUpFailure = ({
+    setStatus,
+    error
+}: Partial<FormikHelpers<FormValues>> & { error: PostgrestError }) => {
+    Sentry.captureException(error)
+    setStatus && setStatus({ formError: handlePostgresErrors(error) })
 }
 
 const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
@@ -64,12 +72,11 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                 })
                 .then(res => {
                     res.data === null && res.error === null
-                        ? successFullSignUp({ setValues, setStatus }) // success
-                        : res.error && setStatus({ formError: handleWatchListErrors(res.error) }) // error
+                        ? signUpSuccess({ setValues, setStatus }) // success
+                        : res.error && signUpFailure({ setStatus, error: res.error }) // error
                     setSubmitting(false)
                 })
         } catch (e) {
-            console.log(e)
             Sentry.captureException(e)
             setStatus({ formError: '😧 Sorry there was an error, please try again' })
             setSubmitting(false)
