@@ -31,7 +31,7 @@ const Input = (props: Props) => {
                     onChange={onChange}
                     onBlur={onBlur}
                     value={value}
-                    className="block w-full rounded-md border-gray-300 px-3  focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                    className="block w-full rounded-md border-gray-300 px-3  focus:border-hot-pink focus:ring-hot-pink sm:text-sm"
                 />
                 {/* <div className="absolute inset-y-0 right-0 flex items-center">
                     <label htmlFor="currency" className="sr-only">
