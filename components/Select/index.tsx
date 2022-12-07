@@ -32,7 +32,7 @@ const Select = (props: Props) => {
                         </Listbox.Label>
 
                         <div className="relative mt-1">
-                            <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2  pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
+                            <Listbox.Button className="relative w-full cursor-default rounded-md border border-gray-300 bg-white py-2  pr-10 text-left shadow-sm focus:border-hot-pink focus:outline-none focus:ring-1 focus:ring-hot-pink sm:text-sm">
                                 <span className="flex items-center">
                                     <span className="ml-3 block truncate">{selected}</span>
                                 </span>
@@ -58,7 +58,7 @@ const Select = (props: Props) => {
                                             className={({ active }) =>
                                                 setClassNames(
                                                     active
-                                                        ? 'text-white bg-indigo-600'
+                                                        ? 'text-white bg-hot-pink'
                                                         : 'text-gray-900 ',
                                                     'relative cursor-default select-none py-2 pl-3 pr-9'
                                                 )
@@ -85,7 +85,7 @@ const Select = (props: Props) => {
                                                             className={setClassNames(
                                                                 active
                                                                     ? 'text-white'
-                                                                    : 'text-indigo-600',
+                                                                    : 'text-hot-pink',
                                                                 'absolute inset-y-0 right-0 flex items-center pr-4'
                                                             )}
                                                         >
