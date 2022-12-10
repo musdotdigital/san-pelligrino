@@ -196,11 +196,11 @@ function Home() {
                             suggestions to help you search the field.
                         </p>
                     </div>
-                    <div className="rounded-xl drop-shadow-lg">
+                    <div className="rounded-xl">
                         <Image
                             alt="Search view"
                             src={slideOne}
-                            className="group-hover:opacity-75"
+                            className="drop-shadow-lg"
                             loading="lazy"
                             width={1200}
                             height={800}
@@ -340,11 +340,11 @@ function Home() {
                             leave notes, and plan future reads for all of your projects.
                         </p>
                     </div>
-                    <div className="rounded-xl drop-shadow-lg">
+                    <div className="rounded-xl">
                         <Image
                             alt="Collab view"
                             src={slideTwo}
-                            className="group-hover:opacity-75"
+                            className="drop-shadow-lg"
                             loading="lazy"
                             width={1200}
                             height={800}

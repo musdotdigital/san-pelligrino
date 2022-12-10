@@ -111,7 +111,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                 status = { success: false },
                 handleSubmit
             }) => (
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col justify-center px-2 sm:px-0">
                     <form onSubmit={handleSubmit}>
                         <Input
                             label="Name?"
@@ -170,7 +170,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                         {errors.gdpr && touched.gdpr && !status.success && (
                             <p className="pt-1 pb-2 text-sm font-semibold ">{errors.gdpr}</p>
                         )}
-                        <div className="flex justify-center pt-4 ">
+                        <div className="flex justify-center pt-4">
                             <button
                                 disabled={isSubmitting || status.success}
                                 type="submit"
