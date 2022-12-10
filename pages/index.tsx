@@ -154,7 +154,7 @@ function Home() {
                                     </div>
                                 </div> */}
                                 <div>
-                                    <h1 className="text-4xl font-bold tracking-tight sm:text-6xl px-12 sm:px-0">
+                                    <h1 className="text-4xl font-bold tracking-tight sm:text-6xl px-10 sm:px-0">
                                         Make sense of the chaos.
                                     </h1>
 
