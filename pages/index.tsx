@@ -180,7 +180,7 @@ function Home() {
                     </div> */}
                     <></>
                 </TwoColumnFeature>
-                <div className="sm:py-16" /> {/* REMOVE PENDING ART */}
+                <div className="pt-8 sm:py-16" /> {/* REMOVE PENDING ART */}
                 <TwoColumnFeature layout="2/3">
                     <div className="col-span-1" id="start">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:mt-24">
