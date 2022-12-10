@@ -33,20 +33,13 @@ function Home() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className=" text-gray-900 bg-hero-pattern bg-no-repeat sm:bg-none">
+        <div className=" text-gray-900 bg-splash-home bg-no-repeat sm:bg-none">
             <div className="">
                 <div className="px-8 pt-6 lg:px-8">
                     <nav className="flex h-9 items-center justify-between" aria-label="Global">
                         <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
                             <a href="#" className="-m-1.5 p-1.5">
-                                <Image
-                                    alt="et al."
-                                    src={etalLogo}
-                                    className="group-hover:opacity-75"
-                                    loading="lazy"
-                                    width={50}
-                                    height={25}
-                                />
+                                <Image src="/et-al.svg" alt="et al." width={55} height={25} />
                             </a>
                         </div>
                         <div className="flex lg:hidden">
@@ -85,11 +78,9 @@ function Home() {
                                 <div className="flex">
                                     <a href="#" className="-m-1.5 p-1.5">
                                         <Image
+                                            src="/et-al.svg"
                                             alt="et al."
-                                            src={etalLogo}
-                                            className="group-hover:opacity-75"
-                                            loading="lazy"
-                                            width={50}
+                                            width={55}
                                             height={25}
                                         />
                                     </a>
