@@ -9,7 +9,7 @@ import Typed from 'react-typed'
 import HomeSearch from '../modules/HomeSearch/'
 import TwoColumnFeature from '../modules/TwoColumnFeature'
 import WatilistSignUp from '../modules/WaitlistSignUp/index'
-import { slideOne, slideTwo } from '../src/images'
+import { etalLogo, slideOne, slideTwo } from '../src/images'
 import { Database } from '../types/supabase'
 
 if (!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
@@ -39,9 +39,14 @@ function Home() {
                     <nav className="flex h-9 items-center justify-between" aria-label="Global">
                         <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
                             <a href="#" className="-m-1.5 p-1.5">
-                                <span className="font-semibold  hover:text-gray-900 dark:hover:text-ice-blue text-2xl dark:text-white">
-                                    et al.
-                                </span>
+                                <Image
+                                    alt="et al."
+                                    src={etalLogo}
+                                    className="group-hover:opacity-75"
+                                    loading="lazy"
+                                    width={50}
+                                    height={25}
+                                />
                             </a>
                         </div>
                         <div className="flex lg:hidden">
@@ -79,9 +84,14 @@ function Home() {
                             <div className="flex h-9 items-center justify-between">
                                 <div className="flex">
                                     <a href="#" className="-m-1.5 p-1.5">
-                                        <span className="font-semibold  hover:text-gray-900 dark:text-white dark:hover:text-ice-blue text-2xl">
-                                            et al.
-                                        </span>
+                                        <Image
+                                            alt="et al."
+                                            src={etalLogo}
+                                            className="group-hover:opacity-75"
+                                            loading="lazy"
+                                            width={50}
+                                            height={25}
+                                        />
                                     </a>
                                 </div>
                                 <div className="flex">
