@@ -176,7 +176,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                                 type="submit"
                                 className="w-full text-center flex relative rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 dark:text-white shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:ring-white/30 dark:hover:ring-white/50"
                             >
-                                {status.success ? 'Signed Up!' : 'Join the waitlist'}
+                                {status.success ? 'Signed Up!' : 'Sign Up'}
 
                                 <div className="absolute right-0 top-0 top-align -mt-1 -mr-1">
                                     <span className="flex h-3 w-3">
