@@ -22,7 +22,14 @@ const HomeSearch = () => (
                         loop
                     />
                 </div>
-                <div className="sm:hidden">Data centre energy...</div>
+                <div className="sm:hidden">
+                    <Typed
+                        strings={['Data centre energy...', 'Deep learning for...']}
+                        typeSpeed={100}
+                        backSpeed={40}
+                        loop
+                    />
+                </div>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400 ">
                 ⌘K
