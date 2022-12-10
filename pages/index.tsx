@@ -33,9 +33,9 @@ function Home() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className="isolate bg-white  text-gray-900  dark:bg-black">
-            <div className="px-8 pt-6 lg:px-8">
-                <div>
+        <div className=" text-gray-900 bg-hero-pattern bg-no-repeat sm:bg-none">
+            <div className="">
+                <div className="px-8 pt-6 lg:px-8">
                     <nav className="flex h-9 items-center justify-between" aria-label="Global">
                         <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
                             <a href="#" className="-m-1.5 p-1.5">
@@ -132,8 +132,6 @@ function Home() {
                         </Dialog.Panel>
                     </Dialog>
                 </div>
-            </div>
-            <main>
                 <TwoColumnFeature layout="1/2" className="pt-24 sm:pt-48" single>
                     <div className="relative px-6 lg:px-8">
                         <div className="mx-auto max-w-3xl text-center">
@@ -156,9 +154,10 @@ function Home() {
                                     </div>
                                 </div> */}
                                 <div>
-                                    <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+                                    <h1 className="text-4xl font-bold tracking-tight sm:text-6xl px-12 sm:px-0">
                                         Make sense of the chaos.
                                     </h1>
+
                                     <p className="mt-6 text-md text-gray-600 dark:text-gray-300">
                                         The platform to{' '}
                                         <span className="bg-zing-green bg-opacity-40 py-1 rounded-sm">
@@ -179,7 +178,7 @@ function Home() {
                                     </p>
                                 </div>
 
-                                <div className="mx-auto pt-6 max-w-lg">
+                                <div className="mx-auto pt-8 max-w-lg">
                                     <HomeSearch />
                                 </div>
                             </div>
@@ -190,7 +189,9 @@ function Home() {
                     </div> */}
                     <></>
                 </TwoColumnFeature>
-                <div className="pt-8 sm:py-16" /> {/* REMOVE PENDING ART */}
+            </div>
+            <main>
+                <div className="pt-12 sm:py-16" /> {/* REMOVE PENDING ART */}
                 <TwoColumnFeature layout="2/3">
                     <div className="col-span-1" id="start">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:mt-24">
