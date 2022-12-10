@@ -17,6 +17,9 @@ module.exports = {
                 'light-ice-blue': '#69CAF0',
                 'light-zing-green': '#E2FC89',
                 'ice-blue-tone': '#C6F4FF'
+            },
+            backgroundImage: {
+                'hero-pattern': "url('/asset-10.svg')"
             }
         }
     },
