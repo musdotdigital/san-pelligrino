@@ -142,7 +142,7 @@ const WatilistSignUp = ({ supabase }: { supabase: SupabaseClient }) => {
                         <Select
                             options={[
                                 'Undergraduate Student',
-                                'Postgraudate Student',
+                                'Postgraduate Student',
                                 'PhD Student',
                                 'Research Fellow',
                                 'Professor',
