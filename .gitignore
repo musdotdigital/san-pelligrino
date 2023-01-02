@@ -39,6 +39,10 @@ next-env.d.ts
 
 # Sentry
 .sentryclirc
+yarn turbo build lint
 
 # Sentry
 .sentryclirc
+
+# Turborepo
+.turbo
